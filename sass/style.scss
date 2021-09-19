@@ -1,0 +1,164 @@
+@use "./variables" as v;
+@use "./mixins.scss" as m;
+
+// reset
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000000;
+}
+
+main {
+  background-color: burlywood;
+  height: 200px;
+}
+
+// navigation 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+
+  height: 33vh;
+  width: 100vw;
+  background-color: #5a5a5a;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  bottom: 10px;
+  width: 60vw;
+  
+  @include m.query-phone {
+    width: 80vw;
+  }
+
+  @include m.query-tablet {
+    width: 75vw;
+  }
+
+  @include m.query-tablet-landscape {
+    width: 70vw;
+  }
+
+  &__item {
+    margin: 0px 20px;
+    width: 38px;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inconsolata', monospace;
+    text-decoration: none;
+    color: rgb(255, 255, 255, 0.4);
+    
+    font-size: 1.2rem;
+
+    @include m.query-phone {
+      font-size: 0.8rem;
+    }
+
+    @include m.query-tablet {
+      font-size: 0.9rem;
+    }
+
+    @include m.query-tablet-landscape {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+}
+
+#linkBar {
+  position: absolute;
+  bottom: 54px;
+  height: 3px;
+  width: 70vw;
+  background-color: #ffffff;
+
+  @include m.query-phone {
+    height: 2px;
+    width: 90vw;
+    bottom: 38px;
+  }
+
+  @include m.query-tablet {
+    height: 2px;
+    width: 80vw;
+    bottom: 41px;
+  }
+
+  @include m.query-tablet-landscape {
+    height: 2px;
+    width: 75vw;
+    bottom: 47px; 
+  }
+
+}
+
+.circle {
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 0px 0px 15px 0px;
+
+  @include m.query-phone {
+    height: 12px;
+    width: 12px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  @include m.query-tablet {
+    height: 15px;
+    width: 15px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  @include m.query-tablet-landscape {
+    height: 17px;
+    width: 17px;
+    margin: 0px 0px 13px 0px;
+  }
+}
+
+// body styling
+.section {
+  height: 67vh;
+}
+
+// temporary section styling
+#home {
+  background-color: #666666;
+}
+
+#about {
+  background-color: #727272;
+}
+
+#skills {
+  background-color: #666666;
+}
+
+#projects {
+  background-color: #727272;
+}
+
+#contact {
+  background-color: #666666;
+}
