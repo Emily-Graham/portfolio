@@ -8,15 +8,17 @@ body {
 }
 
 main {
-  height: 67vh;
   background-color: burlywood;
+  height: 200px;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  position: fixed;
   height: 33vh;
+  width: 100vw;
   background-color: silver;
 }
 
@@ -25,12 +27,14 @@ nav {
   width: 20px;
   background-color: #ffffff;
   border-radius: 50%;
+  margin: 0px 0px 15px 0px;
 }
 
 .navbar {
   display: flex;
   justify-content: center;
-  margin: 0px 0px 1% 0px;
+  position: absolute;
+  bottom: 10px;
 }
 .navbar__item {
   margin: 0px 15px;
@@ -41,10 +45,35 @@ nav {
   flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
+  font-family: "Inconsolata", monospace;
   text-decoration: none;
   color: #ffffff;
   font-size: 1.2rem;
 }
 .navbar__link:hover {
   cursor: pointer;
+}
+
+.section {
+  height: 67vh;
+}
+
+#home {
+  background-color: burlywood;
+}
+
+#about {
+  background-color: cadetblue;
+}
+
+#skills {
+  background-color: cornflowerblue;
+}
+
+#projects {
+  background-color: darkgoldenrod;
+}
+
+#contact {
+  background-color: darkseagreen;
 }
