@@ -1,6 +1,7 @@
 // variables 
 const preloader = document.getElementsByClassName('preloader');
 const overflow = document.getElementsByTagName('body');
+const letsGo = document.getElementById("letsGo");
 
 // once window loads, activate goButton function
 document.addEventListener("load", goButton());

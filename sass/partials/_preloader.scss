@@ -1,0 +1,54 @@
+// preloader/opening page
+.preloader {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  
+  // class to fade preloader
+  &--disappear {
+    animation: fade 2s forwards;
+  }
+
+  @keyframes fade {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // class to prevent overflow
+  &--overflow {
+    overflow: hidden;
+  }
+}
+
+#shiro {
+  margin: 0px 28px 0px 0px;
+}
+
+.letsGo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: black;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__label {
+    margin: 10px 0px;
+    font-family: 'Inconsolata', monospace;
+    color: white;
+  }
+}
