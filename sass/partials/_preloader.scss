@@ -13,11 +13,12 @@
   // class to fade preloader
   &--disappear {
     animation: fade 2s forwards;
+    -webkit-animation: fade 2s forwards;
   }
 
   @keyframes fade {
     100% {
-      opacity: 0;
+      opacity: 0%;
       visibility: hidden;
     }
   }
@@ -27,6 +28,8 @@
     overflow: hidden;
   }
 }
+
+
 
 #shiro {
   margin: 0px 28px 0px 0px;

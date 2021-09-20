@@ -20,10 +20,11 @@ body {
 }
 .preloader--disappear {
   animation: fade 2s forwards;
+  -webkit-animation: fade 2s forwards;
 }
 @keyframes fade {
   100% {
-    opacity: 0;
+    opacity: 0%;
     visibility: hidden;
   }
 }

@@ -1,23 +1,25 @@
 // variables 
-const preloader = document.getElementsByClassName('preloader');
+const preloader = document.querySelector('#preloader');
 const overflow = document.getElementsByTagName('body');
-const letsGo = document.getElementById("letsGo");
+const letsGo = document.querySelector("#letsGo");
 
 // once window loads, activate goButton function
-document.addEventListener("load", goButton());
+// document.addEventListener("load", letsGo());
 
-// prevent overflow of content behind preloader
-// 
+// const letsGo = () => {
+//   // make button appear
+// }
 
-const goButton = () => {
-  // make button appear
-}
-
-// goButton, onclick 
+// letsGoButton, onclick 
 const preloaderFade = () => {
+  console.log("I'm being clicked");
   // black fades out
-    preloader.classList.add("preloader--disapper");
+  preloader.classList.add("preloader--disapper");
+  // loading bar deletes
   // activate navbar animation 
   // delete preloader--overflow class from body
-    overflow.classList.remove("preloader--overflow")
+    // overflow.className.remove("preloader--overflow")
 }
+
+// listen for the letsGo Button event
+letsGo.addEventListener("click", preloaderFade);
