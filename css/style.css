@@ -7,11 +7,6 @@ body {
   background-color: #000000;
 }
 
-main {
-  background-color: burlywood;
-  height: 200px;
-}
-
 nav {
   display: flex;
   justify-content: center;
@@ -159,4 +154,36 @@ nav {
 
 #contact {
   background-color: #666666;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100vw;
+  background-color: #5a5a5a;
+}
+footer > p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media only screen and (max-width: 576px) {
+  footer > p {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  footer > p {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  footer > p {
+    width: 75vw;
+  }
 }
