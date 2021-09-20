@@ -9,11 +9,18 @@
   <!-- font links -->
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <!-- javascript links -->
+  <script src="./../javascript/loading_behaviour.js"></script>
   <script src="./../javascript/navigation.js" defer></script>
   <title>Emily Graham</title>
 </head>
 
-<body>
+<body class="preloader--overflow">
+  <!-- preloader section -->
+  <div class="preloader ">
+    <img id="shiro" src="./../media/test-shiro.png">
+    <button class="letsGo"></button>
+    <label class="letsGo__label" for="letsGo">Let's Go</label>
+  </div>
   <!-- navigation bar -->
   <nav>
     <ul class="navbar">
@@ -54,6 +61,8 @@
       </li>
     </ul>
     <div id="linkBar"></div>
+    <img id="fox" src="./../media/test-shiro.png">
+    <img id="pixelArt" src="./../media/temp nav.png">
   </nav>
 
   <!-- main content -->
