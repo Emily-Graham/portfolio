@@ -32,6 +32,17 @@
   margin: 0px 40px 0px 0px;
 }
 
+.loading-bar {
+  @include m.height-width (3px, 100px);
+  background-color: p.$transparentText;
+
+  &__progress {
+    @include m.height-width (3px, 20%);
+    background-color: white;
+  }
+
+}
+
 .letsGo {
   display: flex;
   justify-content: center;

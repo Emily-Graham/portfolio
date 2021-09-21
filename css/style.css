@@ -36,6 +36,17 @@ body {
   margin: 0px 40px 0px 0px;
 }
 
+.loading-bar {
+  height: 3px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.loading-bar__progress {
+  height: 3px;
+  width: 20%;
+  background-color: white;
+}
+
 .letsGo {
   display: flex;
   justify-content: center;
