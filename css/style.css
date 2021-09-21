@@ -4,10 +4,187 @@
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
   background-color: #000000;
 }
 
-nav {
+.preloader {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+.preloader--disappear {
+  animation: fade 2s forwards;
+  -webkit-animation: fade 2s forwards;
+}
+.preloader--overflow {
+  overflow: hidden;
+}
+@keyframes fade {
+  100% {
+    opacity: 0%;
+    visibility: hidden;
+  }
+}
+
+#shiro {
+  margin: 0px 40px 0px 0px;
+}
+
+.loading-bar {
+  position: absolute;
+  height: 3px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+.loading-bar--animated {
+  animation: barShrink 1s forwards;
+  animation-delay: 3s;
+  animation-timing-function: ease-in;
+}
+@keyframes barShrink {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.loading-bar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.loading-bar__progress {
+  height: 3px;
+  width: 0%;
+  background-color: white;
+}
+.loading-bar__progress--animated {
+  animation: loading 3s forwards;
+}
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.letsGo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+@media only screen and (max-width: 576px) {
+  .letsGo {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .letsGo {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .letsGo {
+    height: 40px;
+    width: 40px;
+  }
+}
+.letsGo:hover {
+  cursor: pointer;
+}
+.letsGo__label {
+  font-family: "Inconsolata", monospace;
+}
+.letsGo__label--appear {
+  animation: textIn 2s forwards;
+  animation-delay: 3.2s;
+}
+@keyframes textIn {
+  0% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: white;
+  }
+}
+.letsGo__pulse {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+}
+.letsGo__pulse--appear {
+  animation: pulseAppear 1s forwards;
+  animation-delay: 3.2s;
+}
+@media only screen and (max-width: 576px) {
+  @keyframes pulseAppear {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    100% {
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  @keyframes pulseAppear {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    100% {
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  @keyframes pulseAppear {
+    0% {
+      width: 0px;
+      height: 0px;
+    }
+    100% {
+      height: 45px;
+      width: 45px;
+    }
+  }
+}
+@keyframes pulseAppear {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.nav {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -17,10 +194,24 @@ nav {
   background-color: #5a5a5a;
 }
 
+#pixelArt {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+}
+
+#fox {
+  position: absolute;
+  bottom: 12%;
+  z-index: 2;
+  border: 1px solid red;
+}
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
   position: absolute;
+  z-index: 3;
   bottom: 10px;
   width: 60vw;
 }
@@ -71,7 +262,7 @@ nav {
 }
 .navbar__link:hover {
   cursor: pointer;
-  color: #ffffff;
+  color: white;
 }
 
 #linkBar {
@@ -79,7 +270,7 @@ nav {
   bottom: 54px;
   height: 3px;
   width: 70vw;
-  background-color: #ffffff;
+  background-color: white;
 }
 @media only screen and (max-width: 576px) {
   #linkBar {
@@ -106,7 +297,7 @@ nav {
 .circle {
   height: 20px;
   width: 20px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 50%;
   margin: 0px 0px 15px 0px;
 }
@@ -137,23 +328,23 @@ nav {
 }
 
 #home {
-  background-color: #666666;
+  background-color: black;
 }
 
 #about {
-  background-color: #727272;
+  background-color: black;
 }
 
 #skills {
-  background-color: #666666;
+  background-color: black;
 }
 
 #projects {
-  background-color: #727272;
+  background-color: black;
 }
 
 #contact {
-  background-color: #666666;
+  background-color: black;
 }
 
 footer {
@@ -162,7 +353,7 @@ footer {
   align-items: center;
   height: 20px;
   width: 100vw;
-  background-color: #5a5a5a;
+  background-color: black;
 }
 footer > p {
   display: flex;

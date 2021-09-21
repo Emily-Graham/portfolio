@@ -1,0 +1,30 @@
+// footer styling
+footer {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100vw;
+  background-color: black;
+
+  & > p {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 0.8rem;
+    color: rgb(255, 255, 255, 0.4);
+
+    @include mQ.query-phone {
+      width: 90vw;
+    }
+  
+    @include mQ.query-tablet {
+      width: 80vw;
+    }
+  
+    @include mQ.query-tablet-landscape {
+      width: 75vw;
+    }
+  }
+}

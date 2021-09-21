@@ -1,0 +1,154 @@
+// preloader/opening page
+.preloader {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include m.height-width (100vh, 100vw);
+  background-color: black;
+  
+  // class to fade preloader
+  &--disappear {
+    animation: fade 2s forwards;
+    -webkit-animation: fade 2s forwards;
+  }
+
+  // class to prevent overflow
+  &--overflow {
+    overflow: hidden;
+  }
+  
+  @keyframes fade {
+    100% {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
+}
+
+// temp styling to balance temp img, DELETE WHEN FIXED
+#shiro {
+  margin: 0px 40px 0px 0px;
+}
+
+.loading-bar {
+  position: absolute;
+  @include m.height-width (3px, 100px);
+  background-color: p.$transparentText;
+  overflow: hidden;
+
+  &--animated {
+    animation: barShrink 1s forwards;
+    animation-delay: 3s;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes barShrink {
+    0% {width: 100px;}
+    100% {width: 0px;}
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+
+  &__progress {
+    @include m.height-width (3px, 0%);
+    background-color: p.$white;
+
+    &--animated {
+      animation: loading 3s forwards;
+    }
+    
+    @keyframes loading {
+      0% {width: 0%;}
+      100% {width: 100%;}
+    }
+  }
+}
+
+.letsGo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include m.height-width (20px, 20px);
+  border-radius: 50%;
+  // CHANGE BG TO WHITE ONCE ANIMATED
+  background-color: rgb(255, 255, 255, 0);
+  border: none;
+
+  @include mQ.query-phone {
+    @include m.height-width (50px, 50px);
+  }
+
+  @include mQ.query-tablet {
+    @include m.height-width (40px, 40px);
+  }
+
+  @include mQ.query-tablet-landscape {
+    @include m.height-width (40px, 40px);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__label {
+    font-family: v.$smallText;
+
+    &--appear {
+      animation: textIn 2s forwards;
+      animation-delay: 3.2s;
+    }
+
+    @keyframes textIn {
+      0% {color: rgb(255, 255, 255, 0);}
+      100% {color: p.$white;}
+    }
+
+  }
+
+  &__pulse {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+
+    // UPDATE ONCE LINKED TO PAGE PROGRESS
+    &--appear {
+      animation: pulseAppear 1s forwards;
+      animation-delay: 3.2s;
+
+      @include mQ.query-phone {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (55px, 55px);}
+        }
+      }
+      
+      @include mQ.query-tablet {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (45px, 45px);}
+        }
+      }
+    
+      @include mQ.query-tablet-landscape {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (45px, 45px);}
+        }
+      }
+      // CHECK LAPTOP SIZES
+      @keyframes pulseAppear {
+        0% {width: 0px; height: 0px;}
+        100% {@include m.height-width (45px, 45px);}
+      }
+    } 
+  }
+}

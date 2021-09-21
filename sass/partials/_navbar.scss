@@ -1,0 +1,124 @@
+// navigation 
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  @include m.height-width (33vh, 100vw);
+  background-color: #5a5a5a;
+}
+
+#pixelArt {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+}
+
+#fox {
+  position: absolute;
+  bottom: 12%;
+  z-index: 2;
+  border: 1px solid red;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  z-index: 3;
+  bottom: 10px;
+  width: 60vw;
+  
+  @include mQ.query-phone {
+    width: 80vw;
+  }
+
+  @include mQ.query-tablet {
+    width: 75vw;
+  }
+
+  @include mQ.query-tablet-landscape {
+    width: 70vw;
+  }
+
+  &__item {
+    margin: 0px 20px;
+    width: 38px; 
+    // width is not applying evenly on all nav__item
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    font-family: v.$smallText;
+    text-decoration: none;
+    color: p.$transparentText;
+    font-size: 1.2rem;
+
+    @include mQ.query-phone {
+      font-size: 0.8rem;
+    }
+
+    @include mQ.query-tablet {
+      font-size: 0.9rem;
+    }
+
+    @include mQ.query-tablet-landscape {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: p.$white;
+    }
+  }
+}
+
+#linkBar {
+  position: absolute;
+  bottom: 54px;
+  height: 3px;
+  width: 70vw;
+  background-color: p.$white;
+
+  @include mQ.query-phone {
+    @include m.height-width (2px, 90vw);
+    bottom: 38px;
+  }
+
+  @include mQ.query-tablet {
+    @include m.height-width (2px, 80vw);
+    bottom: 41px;
+  }
+
+  @include mQ.query-tablet-landscape {
+    @include m.height-width (2px, 75vw);
+    bottom: 47px; 
+  }
+}
+
+.circle {
+  @include m.height-width (20px, 20px);
+  background-color: p.$white;
+  border-radius: 50%;
+  margin: 0px 0px 15px 0px;
+
+  @include mQ.query-phone {
+    @include m.height-width (12px, 12px);
+    margin: 0px 0px 10px 0px;
+  }
+
+  @include mQ.query-tablet {
+    @include m.height-width (15px, 15px);
+    margin: 0px 0px 10px 0px;
+  }
+
+  @include mQ.query-tablet-landscape {
+    @include m.height-width (17px, 17px);
+    margin: 0px 0px 13px 0px;
+  }
+}

@@ -9,13 +9,29 @@
   <!-- font links -->
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <!-- javascript links -->
+  <script src="./../javascript/loading_behaviour.js" defer></script>
   <script src="./../javascript/navigation.js" defer></script>
   <title>Emily Graham</title>
 </head>
 
-<body>
+<body class="preloader--overflow">
+  <!-- preloader section -->
+  <div id="preloader" class="preloader">
+    <img id="shiro" src="./../media/test-shiro.png">
+    <div class="loading-bar__container">
+      <div class="loading-bar loading-bar--animated">
+        <!-- DELETE --animated CLASS WHEN LINKED TO PAGE LOADING -->
+        <div class="loading-bar__progress loading-bar__progress--animated"></div>
+      </div>
+      <button id="letsGo" class="letsGo">
+        <img class="letsGo__pulse letsGo__pulse--appear" src="./../media/pulse.gif">
+      </button>
+    </div>
+    <label class="letsGo__label letsGo__label--appear" for="letsGo">Let's Go</label>
+  </div>
+
   <!-- navigation bar -->
-  <nav>
+  <nav class="nav">
     <ul class="navbar">
       <!-- home link -->
       <li class="navbar__item">
@@ -54,6 +70,8 @@
       </li>
     </ul>
     <div id="linkBar"></div>
+    <!-- <img id="fox" src="./../media/test-shiro.png"> -->
+    <img id="pixelArt" src="./../media/temp nav.png">
   </nav>
 
   <!-- main content -->
