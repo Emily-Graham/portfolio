@@ -1,5 +1,6 @@
 @use "./partials/palette" as p;
 @use "./partials/variables" as v;
+@use "./partials/mediaQuery" as mQ;
 @use "./partials/mixins" as m;
 
 @import "./partials/basics";

@@ -14,8 +14,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background-color: black;
 }
 .preloader--disappear {
@@ -33,7 +33,7 @@ body {
 }
 
 #shiro {
-  margin: 0px 28px 0px 0px;
+  margin: 0px 40px 0px 0px;
 }
 
 .letsGo {
@@ -43,29 +43,69 @@ body {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background-color: black;
+  background-color: white;
   border: none;
+}
+@media only screen and (max-width: 576px) {
+  .letsGo {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .letsGo {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .letsGo {
+    height: 40px;
+    width: 40px;
+  }
 }
 .letsGo:hover {
   cursor: pointer;
 }
 .letsGo__label {
-  margin: 10px 0px;
+  margin: 5px 0px 50px 0px;
   font-family: "Inconsolata", monospace;
   color: white;
 }
+.letsGo__pulse {
+  width: 30px;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 576px) {
+  .letsGo__pulse {
+    height: 55px;
+    width: 55px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .letsGo__pulse {
+    height: 45px;
+    width: 45px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .letsGo__pulse {
+    height: 45px;
+    width: 45px;
+  }
+}
 
-nav {
+.nav {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   position: fixed;
   width: 100vw;
-  height: 33vh;
-  animation-name: openPage 4s;
-  -webkit-animation: openPage 4s;
-  animation-delay: 1s;
+  height: 100vh;
   background-color: #5a5a5a;
+}
+.nav--animated {
+  animation: openPage 4s forwards;
 }
 
 @keyframes openPage {
@@ -205,10 +245,6 @@ nav {
     width: 17px;
     margin: 0px 0px 13px 0px;
   }
-}
-.circle--pulse {
-  width: 30px;
-  border-radius: 50%;
 }
 
 .section {
