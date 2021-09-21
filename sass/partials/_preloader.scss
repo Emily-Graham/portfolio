@@ -28,8 +28,8 @@
   }
 }
 
+// temp styling to balance temp img, DELETE WHEN FIXED
 #shiro {
-  // temp styling to balance temp img, DELETE WHEN FIXED
   margin: 0px 40px 0px 0px;
 }
 
@@ -41,6 +41,7 @@
 
   &--animated {
     animation: barShrink 1s forwards;
+    animation-delay: 3s;
     animation-timing-function: ease-in;
   }
 
@@ -55,14 +56,16 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    border: 1px solid red;
   }
 
   &__progress {
     @include m.height-width (3px, 0%);
     background-color: p.$white;
-    animation: loading 3s forwards;
 
+    &--animated {
+      animation: loading 3s forwards;
+    }
+    
     @keyframes loading {
       0% {width: 0%;}
       100% {width: 100%;}
@@ -76,7 +79,8 @@
   align-items: center;
   @include m.height-width (20px, 20px);
   border-radius: 50%;
-  background-color: p.$white;
+  // CHANGE BG TO WHITE ONCE ANIMATED
+  background-color: rgb(255, 255, 255, 0);
   border: none;
 
   @include mQ.query-phone {
@@ -97,23 +101,54 @@
 
   &__label {
     font-family: v.$smallText;
-    color: p.$white;
+
+    &--appear {
+      animation: textIn 2s forwards;
+      animation-delay: 3.2s;
+    }
+
+    @keyframes textIn {
+      0% {color: rgb(255, 255, 255, 0);}
+      100% {color: p.$white;}
+    }
+
   }
 
   &__pulse {
-    width: 30px;
+    width: 0px;
+    height: 0px;
     border-radius: 50%;
 
-    @include mQ.query-phone {
-      @include m.height-width (55px, 55px);
-    }
+    // UPDATE ONCE LINKED TO PAGE PROGRESS
+    &--appear {
+      animation: pulseAppear 1s forwards;
+      animation-delay: 3.2s;
+
+      @include mQ.query-phone {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (55px, 55px);}
+        }
+      }
+      
+      @include mQ.query-tablet {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (45px, 45px);}
+        }
+      }
     
-    @include mQ.query-tablet {
-      @include m.height-width (45px, 45px);
-    }
-  
-    @include mQ.query-tablet-landscape {
-      @include m.height-width (45px, 45px);
-    }
+      @include mQ.query-tablet-landscape {
+        @keyframes pulseAppear {
+          0% {width: 0px; height: 0px;}
+          100% {@include m.height-width (45px, 45px);}
+        }
+      }
+      // CHECK LAPTOP SIZES
+      @keyframes pulseAppear {
+        0% {width: 0px; height: 0px;}
+        100% {@include m.height-width (45px, 45px);}
+      }
+    } 
   }
 }

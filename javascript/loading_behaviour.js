@@ -6,6 +6,7 @@ const letsGoLabel = document.querySelector(".letsGo__label");
 const loadingBar = document.querySelector(".loading-bar");
 const loadingSlider = document.querySelector(".loading-bar__progress");
 const nav = document.querySelector(".nav");
+
 // Variable not yet called
 const loadingSliderWidth = loadingSlider.style.width;
 

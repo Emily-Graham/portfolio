@@ -19,15 +19,15 @@
   <div id="preloader" class="preloader">
     <img id="shiro" src="./../media/test-shiro.png">
     <div class="loading-bar__container">
-      <div class="loading-bar">
-        <div class="loading-bar__progress"></div>
+      <div class="loading-bar loading-bar--animated">
+        <!-- DELETE --animated CLASS WHEN LINKED TO PAGE LOADING -->
+        <div class="loading-bar__progress loading-bar__progress--animated"></div>
       </div>
       <button id="letsGo" class="letsGo">
-        <img class="letsGo__pulse" src="./../media/pulse.gif">
+        <img class="letsGo__pulse letsGo__pulse--appear" src="./../media/pulse.gif">
       </button>
-      
     </div>
-    <label class="letsGo__label" for="letsGo">Let's Go</label>
+    <label class="letsGo__label letsGo__label--appear" for="letsGo">Let's Go</label>
   </div>
 
   <!-- navigation bar -->
