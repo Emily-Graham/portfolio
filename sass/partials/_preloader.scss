@@ -15,32 +15,59 @@
     -webkit-animation: fade 2s forwards;
   }
 
+  // class to prevent overflow
+  &--overflow {
+    overflow: hidden;
+  }
+  
   @keyframes fade {
     100% {
       opacity: 0%;
       visibility: hidden;
     }
   }
-
-  // class to prevent overflow
-  &--overflow {
-    overflow: hidden;
-  }
 }
 
 #shiro {
+  // temp styling to balance temp img, DELETE WHEN FIXED
   margin: 0px 40px 0px 0px;
 }
 
 .loading-bar {
+  position: absolute;
   @include m.height-width (3px, 100px);
   background-color: p.$transparentText;
+  overflow: hidden;
 
-  &__progress {
-    @include m.height-width (3px, 20%);
-    background-color: white;
+  &--animated {
+    animation: barShrink 1s forwards;
+    animation-timing-function: ease-in;
   }
 
+  @keyframes barShrink {
+    0% {width: 100px;}
+    100% {width: 0px;}
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border: 1px solid red;
+  }
+
+  &__progress {
+    @include m.height-width (3px, 0%);
+    background-color: p.$white;
+    animation: loading 3s forwards;
+
+    @keyframes loading {
+      0% {width: 0%;}
+      100% {width: 100%;}
+    }
+  }
 }
 
 .letsGo {
@@ -49,7 +76,7 @@
   align-items: center;
   @include m.height-width (20px, 20px);
   border-radius: 50%;
-  background-color: white;
+  background-color: p.$white;
   border: none;
 
   @include mQ.query-phone {
@@ -69,9 +96,8 @@
   }
 
   &__label {
-    margin: 5px 0px 50px 0px;
     font-family: v.$smallText;
-    color: white;
+    color: p.$white;
   }
 
   &__pulse {
