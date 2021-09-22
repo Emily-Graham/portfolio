@@ -6,3 +6,7 @@ Aim:
 
 Note to self:
 - rotating sections must be on a z-index of 1 for cursor interactivity to function (such as forms)
+
+Questions/problems to address:
+-unexpected behaviour in scrolling 
+--sometimes, the page does not scroll, needs to be tested in pages/across browsers
