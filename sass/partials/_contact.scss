@@ -1,0 +1,97 @@
+@use "./palette" as p;
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./mediaQuery" as mQ;
+
+.contact {
+  position:relative;
+  // z-index: -1;
+  height: calc(100vh - 20px);
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    @include m.height-width(67vh, 80vw);
+    border: 1px solid red;
+    @include mQ.query-phone {
+      flex-direction: column;
+      width: 95vw;
+    }
+    @include mQ.query-tablet {
+      width: 90vw;
+    }
+    @include mQ.query-tablet-landscape {
+      width: 90vw;
+    }
+    
+    &--1 {
+      background-color: antiquewhite;
+      max-height: 60vh;
+      width: 50%;
+      border: 1px solid blue;
+      @include mQ.query-phone {
+        width: 100%;
+      }
+      @include mQ.query-tablet {
+        width: 70%;
+      }
+      @include mQ.query-tablet-landscape {
+        width: 90vw;
+      }
+
+    }
+
+    &--2 {
+      display: flex;
+      background-color: peachpuff;
+      max-height: 60vh;
+      width: 40%;
+      border: 1px solid green;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.form {
+  @include m.height-width(300px, 200px);
+  padding: 20px;
+  background-color: peachpuff;
+
+  &__label {
+    color: p.$white;
+    font-family: v.$smallText;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include m.height-width(60px, 60px);
+    padding: 20px 10px;
+    color: p.$white;
+    border: none;
+    border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--reset {
+      color: black;
+      border: 4px solid black;
+    }
+
+    &--submit {
+      color: p.$white;
+      background-color: crimson;
+    }
+  }
+}

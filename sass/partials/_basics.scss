@@ -4,6 +4,12 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: none; //IE, Edge, Firefox
+}
+
+// hide scrollbar Safari, Chrome, Opera
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
