@@ -12,3 +12,6 @@ Questions/problems to address:
 - unexpected behaviour in scrolling - seems to be on refresh, linked to preloader
 -- sometimes, the page does not scroll, needs to be tested in pages/across browsers
 - how to fix preloader behaviour when on a different section? 
+
+Bonus Feature time permitting:
+- landscape orientation layouts -- nav no-overflow right hand aligned
