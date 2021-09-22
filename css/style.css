@@ -123,7 +123,7 @@ body {
 }
 .letsGo__label--appear {
   animation: textIn 2s forwards;
-  animation-delay: 3.2s;
+  animation-delay: 3.4s;
 }
 @keyframes textIn {
   0% {
@@ -360,8 +360,9 @@ body {
   position: absolute;
   bottom: 0px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   height: 67vh;
   width: 80vw;
   border: 1px solid red;
@@ -380,6 +381,58 @@ body {
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .home__section {
     width: 90vw;
+  }
+}
+.home__title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: normal;
+  font-size: 8rem;
+  color: white;
+}
+@media only screen and (max-width: 576px) {
+  .home__title {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .home__title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .home__title {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .home__title {
+    font-size: 6rem;
+  }
+}
+.home__subTitle {
+  font-family: "Inconsolata", monospace;
+  font-weight: normal;
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media only screen and (max-width: 576px) {
+  .home__subTitle {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .home__subTitle {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .home__subTitle {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .home__subTitle {
+    font-size: 2.8rem;
   }
 }
 
