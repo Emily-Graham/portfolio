@@ -1,6 +1,11 @@
 * {
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -189,6 +194,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   position: fixed;
+  z-index: 1;
   height: 33vh;
   width: 100vw;
   background-color: #5a5a5a;
@@ -208,10 +214,10 @@ body {
 }
 
 .navbar {
+  position: absolute;
+  z-index: 6;
   display: flex;
   justify-content: space-evenly;
-  position: absolute;
-  z-index: 3;
   bottom: 10px;
   width: 60vw;
 }
@@ -324,7 +330,10 @@ body {
 }
 
 .section {
-  height: 67vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #home {
@@ -344,7 +353,68 @@ body {
 }
 
 #contact {
-  background-color: black;
+  background-color: skyblue;
+}
+
+.contact {
+  position: relative;
+  height: calc(100vh - 20px);
+}
+.contact__section {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  height: 67vh;
+  width: 80vw;
+  border: 1px solid red;
+}
+.contact__section--1 {
+  background-color: antiquewhite;
+  border: 1px solid blue;
+}
+.contact__section--2 {
+  display: flex;
+  background-color: peach;
+  border: 1px solid green;
+}
+.contact__image {
+  max-width: 300px;
+  max-height: 250px;
+  height: auto;
+}
+
+.form {
+  height: 300px;
+  width: 200px;
+  padding: 20px;
+  background-color: peachpuff;
+}
+.form__label {
+  color: white;
+  font-family: "Inconsolata", monospace;
+}
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  padding: 20px 10px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+.form__button:hover {
+  cursor: pointer;
+}
+.form__button--reset {
+  color: black;
+  border: 4px solid black;
+}
+.form__button--submit {
+  color: white;
+  background-color: crimson;
 }
 
 footer {

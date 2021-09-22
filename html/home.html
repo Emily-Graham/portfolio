@@ -11,6 +11,7 @@
   <!-- javascript links -->
   <script src="./../javascript/loading_behaviour.js" defer></script>
   <script src="./../javascript/navigation.js" defer></script>
+  <script src="./../javascript/contact.js" defer></script>
   <title>Emily Graham</title>
 </head>
 
@@ -71,7 +72,7 @@
     </ul>
     <div id="linkBar"></div>
     <!-- <img id="fox" src="./../media/test-shiro.png"> -->
-    <img id="pixelArt" src="./../media/temp nav.png">
+    <!-- <img id="pixelArt" src="./../media/temp nav.png"> -->
   </nav>
 
   <!-- main content -->
@@ -94,7 +95,36 @@
     </section>
 
     <!-- contact section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact">
+      <div class="contact__section">
+        <div class="contact__section--1">
+          <!-- form -->
+          <form id="contactForm" class="form" onsubmit="return submitMessage(event);" action="https://formsubmit.co/graham.emily15@gmail.com" method="POST">
+
+            <!-- email -->
+            <label for="email" class="form__label">Email:</label>
+            <input type="text" name="email" id="email" required>
+
+            <!-- full name -->
+            <label for="fullName" class="form__label">Full Name:</label>
+            <input type="text" name="fullName" id="fullName">
+
+            <!-- message -->
+            <label for="message" class="form__label">Got a <u>Quest</u>ion?:</label>
+            <textarea name="message" id="message" rows="3" cols="20" placeholder="Tell us what's on your mind" required></textarea>
+
+            <!-- clear button -->
+            <input class="form__button form__button--reset" type="reset" onclick="clearForm();">
+
+            <!-- submit button -->
+            <input id="submit" type="submit" class="form__button form__button--submit">
+          </form>
+        </div>
+        <div class="contact__section--2">
+          <!-- REPLACE IMAGE WITH PIXEL ASSET-->
+          <img class="contact__image" src="./../media/4b2c2bb529955adc24eba210b7127655.jpg">
+        </div>
+      </div>
     </section>
   </main>
 

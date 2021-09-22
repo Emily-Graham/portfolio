@@ -9,10 +9,14 @@
 
 // body styling
 .section {
-  height: 67vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 // temporary section styling
+// NOTE: Sections must be z-index: 1; in order for interactivity to work with cursor
 #home {
   background-color: black;
 }
@@ -30,7 +34,7 @@
 }
 
 #contact {
-  background-color: black;
+  background-color: skyblue;
 }
-
+@import "./partials/contact";
 @import "./partials/footer";
