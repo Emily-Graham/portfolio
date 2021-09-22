@@ -16,7 +16,7 @@ body {
 
 .preloader {
   position: absolute;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,7 +194,7 @@ body {
   justify-content: center;
   align-items: flex-end;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   height: 33vh;
   width: 100vw;
   background-color: #5a5a5a;
@@ -356,7 +356,7 @@ body {
   background-color: skyblue;
 }
 
-.home__section {
+.home__visibleArea {
   position: absolute;
   bottom: 0px;
   display: flex;
@@ -365,75 +365,105 @@ body {
   align-items: flex-start;
   height: 67vh;
   width: 80vw;
-  border: 1px solid red;
 }
 @media only screen and (max-width: 576px) {
-  .home__section {
+  .home__visibleArea {
     flex-direction: column;
     width: 95vw;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .home__section {
+  .home__visibleArea {
     width: 90vw;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .home__section {
+  .home__visibleArea {
     width: 90vw;
   }
 }
-.home__title {
+
+.dialouge__size {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin: auto 0%;
+  height: auto;
+  width: 100%;
+}
+.dialouge__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 5%;
+}
+.dialouge__title {
+  position: relative;
+  z-index: 2;
   font-family: "Chakra Petch", sans-serif;
   font-weight: normal;
   font-size: 8rem;
   color: white;
 }
 @media only screen and (max-width: 576px) {
-  .home__title {
+  .dialouge__title {
     font-size: 3rem;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .home__title {
+  .dialouge__title {
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .home__title {
+  .dialouge__title {
     font-size: 5rem;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1024px) {
-  .home__title {
+  .dialouge__title {
     font-size: 6rem;
   }
 }
-.home__subTitle {
+.dialouge__subTitle {
+  position: relative;
+  z-index: 2;
+  padding-left: 4px;
   font-family: "Inconsolata", monospace;
   font-weight: normal;
   font-size: 4rem;
   color: rgba(255, 255, 255, 0.4);
 }
 @media only screen and (max-width: 576px) {
-  .home__subTitle {
+  .dialouge__subTitle {
     font-size: 1.2rem;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .home__subTitle {
+  .dialouge__subTitle {
     font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .home__subTitle {
+  .dialouge__subTitle {
     font-size: 2.5rem;
   }
 }
 @media only screen and (min-width: 993px) and (max-width: 1024px) {
-  .home__subTitle {
+  .dialouge__subTitle {
     font-size: 2.8rem;
   }
+}
+.dialouge__portrait {
+  position: absolute;
+  bottom: 3px;
+  right: 5%;
+  z-index: 2;
+}
+.dialouge__frame {
+  margin: auto;
+  width: 100%;
 }
 
 .contact {
