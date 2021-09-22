@@ -1,5 +1,5 @@
 .home {
-  &__section {
+  &__visibleArea {
     position: absolute;
     bottom: 0px;
     display: flex;
@@ -17,10 +17,30 @@
     @include mQ.query-tablet-landscape {
       width: 90vw;
     }
-    border: 1px solid red;
   }
-  
+}
+
+.dialouge {
+
+  &__size {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: auto 0%;
+    @include m.height-width(auto, 100%);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 5%;
+  }
+
   &__title {
+    position: relative;
+    z-index: 2;
     font-family: v.$titleText;
     font-weight: normal;
     font-size: 8rem;
@@ -40,6 +60,9 @@
   }
 
   &__subTitle {
+    position: relative;
+    z-index: 2;
+    padding-left: 4px;
     font-family: v.$smallText;
     font-weight: normal;
     font-size: 4rem;
@@ -56,5 +79,17 @@
     @include mQ.query-laptop {
       font-size: 2.8rem;
     }
+  }
+
+  &__portrait {
+    position: absolute;
+    bottom: 3px;
+    right: 5%;
+    z-index: 2;
+  }
+
+  &__frame {
+    margin: auto;
+    width: 100%;
   }
 }
