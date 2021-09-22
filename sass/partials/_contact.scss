@@ -1,6 +1,7 @@
 @use "./palette" as p;
 @use "./variables" as v;
 @use "./mixins" as m;
+@use "./mediaQuery" as mQ;
 
 .contact {
   position:relative;
@@ -9,27 +10,51 @@
 
   &__section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
     bottom: 0px;
     @include m.height-width(67vh, 80vw);
     border: 1px solid red;
-
+    @include mQ.query-phone {
+      flex-direction: column;
+      width: 95vw;
+    }
+    @include mQ.query-tablet {
+      width: 90vw;
+    }
+    @include mQ.query-tablet-landscape {
+      width: 90vw;
+    }
+    
     &--1 {
       background-color: antiquewhite;
+      max-height: 60vh;
+      width: 50%;
       border: 1px solid blue;
+      @include mQ.query-phone {
+        width: 100%;
+      }
+      @include mQ.query-tablet {
+        width: 70%;
+      }
+      @include mQ.query-tablet-landscape {
+        width: 90vw;
+      }
+
     }
 
     &--2 {
       display: flex;
-      background-color: peach;
+      background-color: peachpuff;
+      max-height: 60vh;
+      width: 40%;
       border: 1px solid green;
     }
   }
 
   &__image {
-    max-width: 300px;
-    max-height: 250px;
+    width: 100%;
     height: auto;
   }
 
