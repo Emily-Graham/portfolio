@@ -1,0 +1,21 @@
+.home {
+  &__section {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include m.height-width (67vh, 80vw);
+    @include mQ.query-phone {
+      flex-direction: column;
+      width: 95vw;
+    }
+    @include mQ.query-tablet {
+      width: 90vw;
+    }
+    @include mQ.query-tablet-landscape {
+      width: 90vw;
+    }
+    border: 1px solid red;
+  }
+}

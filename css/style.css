@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: calc(67vh - 50px);
+  height: 100vh;
   width: 100vw;
   background-color: black;
 }
@@ -354,6 +354,33 @@ body {
 
 #contact {
   background-color: skyblue;
+}
+
+.home__section {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 67vh;
+  width: 80vw;
+  border: 1px solid red;
+}
+@media only screen and (max-width: 576px) {
+  .home__section {
+    flex-direction: column;
+    width: 95vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .home__section {
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .home__section {
+    width: 90vw;
+  }
 }
 
 .contact {
