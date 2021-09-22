@@ -9,4 +9,4 @@ Note to self:
 
 Questions/problems to address:
 -unexpected behaviour in scrolling 
---sometimes, the page does not scroll, needs to be tested in pages/across browsers
+>sometimes, the page does not scroll, needs to be tested in pages/across browsers
