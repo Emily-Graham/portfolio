@@ -14,6 +14,7 @@ Questions/problems to address:
 - can I fix the footer/contact section sizing using vh and px?
 - unexpected behaviour in scrolling - seems to be on refresh, linked to preloader
 -- sometimes, the page does not scroll, needs to be tested in pages/across browsers
+--issue found; scroll locks on refresh due to 'let's go' button
 - how to fix preloader behaviour when on a different section? 
 - how to create efficent code (cut down loading time)
 
