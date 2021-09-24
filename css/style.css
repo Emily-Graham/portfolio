@@ -461,6 +461,12 @@ body {
   right: 5%;
   z-index: 2;
 }
+.dialouge__portrait--blink {
+  z-index: 3;
+}
+.dialouge__portrait--blink:hover {
+  display: none;
+}
 .dialouge__frame {
   margin: auto;
   width: 100%;
