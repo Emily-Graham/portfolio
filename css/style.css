@@ -369,7 +369,7 @@ body {
 @media only screen and (max-width: 576px) {
   .home__visibleArea {
     flex-direction: column;
-    width: 95vw;
+    width: 90vw;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
@@ -391,6 +391,12 @@ body {
   height: auto;
   width: 100%;
 }
+@media only screen and (max-width: 576px) {
+  .dialouge__size {
+    height: 67vh;
+    justify-content: center;
+  }
+}
 .dialouge__box {
   display: flex;
   flex-direction: column;
@@ -398,32 +404,25 @@ body {
   position: absolute;
   left: 5%;
 }
+@media only screen and (max-width: 576px) {
+  .dialouge__box {
+    width: 80vw;
+    margin: 28% auto 73% auto;
+    left: 0;
+    right: 0;
+  }
+}
 .dialouge__title {
   position: relative;
   z-index: 2;
   font-family: "Chakra Petch", sans-serif;
   font-weight: normal;
-  font-size: 8rem;
+  font-size: 8vw;
   color: white;
 }
 @media only screen and (max-width: 576px) {
   .dialouge__title {
-    font-size: 3rem;
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .dialouge__title {
-    font-size: 5rem;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .dialouge__title {
-    font-size: 5rem;
-  }
-}
-@media only screen and (min-width: 993px) and (max-width: 1024px) {
-  .dialouge__title {
-    font-size: 6rem;
+    font-size: 12.8vw;
   }
 }
 .dialouge__subTitle {
@@ -432,27 +431,12 @@ body {
   padding-left: 4px;
   font-family: "Inconsolata", monospace;
   font-weight: normal;
-  font-size: 4rem;
+  font-size: 3vw;
   color: rgba(255, 255, 255, 0.4);
 }
 @media only screen and (max-width: 576px) {
   .dialouge__subTitle {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .dialouge__subTitle {
-    font-size: 2.5rem;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .dialouge__subTitle {
-    font-size: 2.5rem;
-  }
-}
-@media only screen and (min-width: 993px) and (max-width: 1024px) {
-  .dialouge__subTitle {
-    font-size: 2.8rem;
+    font-size: 1rem;
   }
 }
 .dialouge__portrait {
@@ -460,6 +444,15 @@ body {
   bottom: 3px;
   right: 5%;
   z-index: 2;
+  width: 30%;
+}
+@media only screen and (max-width: 576px) {
+  .dialouge__portrait {
+    width: 55%;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
 }
 .dialouge__portrait--blink {
   z-index: 3;
@@ -467,9 +460,23 @@ body {
 .dialouge__portrait--blink:hover {
   display: none;
 }
-.dialouge__frame {
+.dialouge__frame, .dialouge__frame--phone {
   margin: auto;
   width: 100%;
+  display: visible;
+}
+@media only screen and (max-width: 576px) {
+  .dialouge__frame, .dialouge__frame--phone {
+    display: none;
+  }
+}
+.dialouge__frame--phone {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .dialouge__frame--phone {
+    display: block;
+  }
 }
 
 .contact {
