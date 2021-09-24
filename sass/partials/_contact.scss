@@ -14,7 +14,7 @@
     align-items: center;
     position: absolute;
     bottom: 0px;
-    @include m.height-width(67vh, 80vw);
+    @include m.height-width(67vh, 100vw);
     border: 1px solid red;
     @include mQ.query-phone {
       flex-direction: column;
