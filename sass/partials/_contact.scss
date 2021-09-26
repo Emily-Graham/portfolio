@@ -6,7 +6,8 @@
 .contact {
   position:relative;
   // z-index: -1;
-  height: calc(100vh - 20px);
+  height: 100vh;
+  width: 100vw;
 
   &__section {
     display: flex;
@@ -14,10 +15,16 @@
     align-items: center;
     position: absolute;
     bottom: 0px;
-    @include m.height-width(67vh, 100vw);
+    @include m.height-width(67vh, 50%);
     border: 1px solid red;
+    @include mQ.query-phone-small {
+      flex-direction: column;
+      justify-content: center;
+      width: 95vw;
+    }
     @include mQ.query-phone {
       flex-direction: column;
+      justify-content: center;
       width: 95vw;
     }
     @include mQ.query-tablet {
@@ -26,34 +33,37 @@
     @include mQ.query-tablet-landscape {
       width: 90vw;
     }
-    
-    &__container {
-      background-color: antiquewhite;
-      max-height: 60vh;
-      width: 50%;
-      border: 1px solid blue;
-      @include mQ.query-phone {
-        width: 100%;
-      }
-      @include mQ.query-tablet {
-        width: 70%;
-      }
-      @include mQ.query-tablet-landscape {
-        width: 90vw;
-      }
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
   }
 }
 
 .form {
-  @include m.height-width(500px, 300px);
-  padding: 20px;
-  background-color: peachpuff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include m.height-width(500px, 380px);
+    padding: 20px;
+    background-color: peachpuff;
+    border: 1px solid blue;
+    @include mQ.query-phone-small {
+      @include m.height-width(80%, 80%);
+    }
+    @include mQ.query-phone {
+      @include m.height-width(80%, 80%);
+    }
+    @include mQ.query-tablet {
+      @include m.height-width(80%, 60%);
+    }
+    @include mQ.query-tablet-landscape {
+      @include m.height-width(80%, 60%);
+    }
+  }
 
   &__title {
     font-family: v.$smallText;
@@ -69,6 +79,13 @@
   &__label {
     color: p.$black;
     font-family: v.$smallText;
+
+  }
+
+  &__input {
+    margin: 20px 0px 0px 0px;
+    padding: 8px;
+    width: 72%;
   }
 
   &__button {
@@ -76,7 +93,6 @@
     justify-content: center;
     align-items: center;
     @include m.height-width(60px, 60px);
-    padding: 20px 10px;
     color: p.$white;
     border: none;
     border-radius: 50%;
@@ -86,11 +102,17 @@
     }
 
     &--reset {
+      position: absolute;
+      bottom: 20px;
+      right: 100px;
       color: black;
       border: 4px solid black;
     }
 
     &--submit {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
       color: p.$white;
       background-color: crimson;
     }

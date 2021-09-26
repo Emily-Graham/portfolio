@@ -379,7 +379,7 @@ body {
 }
 
 #contact {
-  background-color: skyblue;
+  background-color: black;
 }
 
 .home__visibleArea {
@@ -717,7 +717,8 @@ body {
 
 .contact {
   position: relative;
-  height: calc(100vh - 20px);
+  height: 100vh;
+  width: 100vw;
 }
 .contact__section {
   display: flex;
@@ -726,12 +727,20 @@ body {
   position: absolute;
   bottom: 0px;
   height: 67vh;
-  width: 100vw;
+  width: 50%;
   border: 1px solid red;
+}
+@media only screen and (max-width: 400px) {
+  .contact__section {
+    flex-direction: column;
+    justify-content: center;
+    width: 95vw;
+  }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .contact__section {
     flex-direction: column;
+    justify-content: center;
     width: 95vw;
   }
 }
@@ -745,37 +754,47 @@ body {
     width: 90vw;
   }
 }
-.contact__section__container {
-  background-color: antiquewhite;
-  max-height: 60vh;
-  width: 50%;
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+}
+.form__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 380px;
+  padding: 20px;
+  background-color: peachpuff;
   border: 1px solid blue;
 }
+@media only screen and (max-width: 400px) {
+  .form__container {
+    height: 80%;
+    width: 80%;
+  }
+}
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .contact__section__container {
-    width: 100%;
+  .form__container {
+    height: 80%;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .contact__section__container {
-    width: 70%;
+  .form__container {
+    height: 80%;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .contact__section__container {
-    width: 90vw;
+  .form__container {
+    height: 80%;
+    width: 60%;
   }
-}
-.contact__image {
-  width: 100%;
-  height: auto;
-}
-
-.form {
-  height: 500px;
-  width: 300px;
-  padding: 20px;
-  background-color: peachpuff;
 }
 .form__title {
   font-family: "Inconsolata", monospace;
@@ -790,13 +809,17 @@ body {
   color: black;
   font-family: "Inconsolata", monospace;
 }
+.form__input {
+  margin: 20px 0px 0px 0px;
+  padding: 8px;
+  width: 72%;
+}
 .form__button {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
   width: 60px;
-  padding: 20px 10px;
   color: white;
   border: none;
   border-radius: 50%;
@@ -805,10 +828,16 @@ body {
   cursor: pointer;
 }
 .form__button--reset {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
   color: black;
   border: 4px solid black;
 }
 .form__button--submit {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
   color: white;
   background-color: crimson;
 }
