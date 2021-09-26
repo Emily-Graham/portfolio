@@ -22,6 +22,9 @@
 }
 
 #about {
+  display: flex;
+  position: relative;
+
   background-color: black;
 }
 
@@ -37,5 +40,6 @@
   background-color: skyblue;
 }
 @import "./partials/home";
-@import "./partials/contact";
+@import "./partials/about";
+@import "./partials/about";
 @import "./partials/footer";

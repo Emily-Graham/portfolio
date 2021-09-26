@@ -1,4 +1,4 @@
-.home {
+.about {
   &__visibleArea {
     position: absolute;
     bottom: 0px;
@@ -32,14 +32,15 @@
     position: absolute;
     margin: auto 0%;
     @include m.height-width(auto, 100%);
-
     @include mQ.query-phone-small {
       height: 67vh;
       justify-content: center;
+      align-items: center;
     }
     @include mQ.query-phone {
       height: 67vh;
       justify-content: center;
+      align-items: center;
     }
   }
 
@@ -49,49 +50,37 @@
     justify-content: center;
     position: absolute;
     left: 5%;
+
     @include mQ.query-phone-small {
       width: 80vw;
-      margin: 28% auto 73% auto;
+      margin: 30% auto 70% auto;
       left: 0;
       right: 0;
     }
     @include mQ.query-phone {
       width: 80vw;
-      margin: 28% auto 73% auto;
+      margin: 44% auto 56% auto;
       left: 0;
       right: 0;
     }
   }
 
-  &__title {
-    position: relative;
-    z-index: 2;
-    font-family: v.$titleText;
-    font-weight: normal;
-    font-size: 8vw;
-    color: p.$white;
-
-    @include mQ.query-phone-small {
-      font-size: 12.8vw;
-    }
-    @include mQ.query-phone {
-      font-size: 12.8vw;
-    }
-  }
-
-  &__subTitle {
+  &__paragraph {
     position: relative;
     z-index: 2;
     padding-left: 4px;
     font-family: v.$smallText;
     font-weight: normal;
-    font-size: 3vw;
+    font-size: 1.5vw;
     color: p.$transparentText;
+    width: 62%;
     @include mQ.query-phone-small {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      width: 100%;
     }
     @include mQ.query-phone {
-      font-size: 1rem;
+      font-size: 0.95rem;
+      width: 100%;
     }
   }
 
@@ -128,6 +117,7 @@
     margin: auto;
     width: 100%;
     display: visible;
+
     @include mQ.query-phone-small {
       display: none;
     }
@@ -138,11 +128,17 @@
     &--phone {
       @extend .dialouge__frame;
       display: none;
-      @include mQ.query-phone-small {
-        display: block;
-      }
       @include mQ.query-phone {
         display: block;
+      }
+    }
+
+    &--phoneSmall {
+      @extend .dialouge__frame;
+      display: none;
+      @include mQ.query-phone-small {
+        display: block;
+        margin: 40% auto 60% auto;
       }
     }
   }
