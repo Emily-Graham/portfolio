@@ -1,14 +1,12 @@
 Aim:
 - to build a website the pays homage to pixel art games
-- pay attention to viewer attention 
 - apply parallax
 - add fluid site animations
 
 Note to self:
-- rotating sections must be on a z-index of 1 for cursor interactivity to function (such as forms)
 - black filter layer fades in over navbar when not in use to improve visual hierachy
 - skills will be a skill tree -- hover pops up info box (consider mobile alternative to hover)
-- projects will be a 'project inventory' -- clicking icons will give detail
+- projects will be 'completed quests' -- clicking icons will give detail
 
 Questions/problems to address:
 - can I fix the footer/contact section sizing using vh and px?
@@ -20,3 +18,4 @@ Questions/problems to address:
 
 Bonus Feature time permitting:
 - landscape orientation layouts for mobile -- nav no-overflow right hand aligned
+- dialouge system for about section
