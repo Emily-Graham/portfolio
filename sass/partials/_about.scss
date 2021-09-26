@@ -7,6 +7,10 @@
     justify-content: center;
     align-items: flex-start;
     @include m.height-width (67vh, 80vw);
+    @include mQ.query-phone-small {
+      flex-direction: column;
+      width: 90vw;
+    }
     @include mQ.query-phone {
       flex-direction: column;
       width: 90vw;
@@ -28,7 +32,11 @@
     position: absolute;
     margin: auto 0%;
     @include m.height-width(auto, 100%);
-
+    @include mQ.query-phone-small {
+      height: 67vh;
+      justify-content: center;
+      align-items: center;
+    }
     @include mQ.query-phone {
       height: 67vh;
       justify-content: center;
@@ -43,6 +51,12 @@
     position: absolute;
     left: 5%;
 
+    @include mQ.query-phone-small {
+      width: 80vw;
+      margin: 30% auto 70% auto;
+      left: 0;
+      right: 0;
+    }
     @include mQ.query-phone {
       width: 80vw;
       margin: 44% auto 56% auto;
@@ -60,6 +74,10 @@
     font-size: 1.5vw;
     color: p.$transparentText;
     width: 62%;
+    @include mQ.query-phone-small {
+      font-size: 0.95rem;
+      width: 100%;
+    }
     @include mQ.query-phone {
       font-size: 0.95rem;
       width: 100%;
@@ -73,6 +91,12 @@
     z-index: 2;
     width: 30%;
 
+    @include mQ.query-phone-small {
+      width: 55%;
+      margin: auto;
+      right: 0;
+      left: 0;
+    }
     @include mQ.query-phone {
       width: 55%;
       margin: auto;
@@ -93,6 +117,10 @@
     margin: auto;
     width: 100%;
     display: visible;
+
+    @include mQ.query-phone-small {
+      display: none;
+    }
     @include mQ.query-phone {
       display: none;
     }
@@ -102,6 +130,15 @@
       display: none;
       @include mQ.query-phone {
         display: block;
+      }
+    }
+
+    &--phoneSmall {
+      @extend .dialouge__frame;
+      display: none;
+      @include mQ.query-phone-small {
+        display: block;
+        margin: 40% auto 60% auto;
       }
     }
   }

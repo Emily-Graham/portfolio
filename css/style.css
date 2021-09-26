@@ -97,7 +97,7 @@ body {
   background-color: rgba(255, 255, 255, 0);
   border: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .letsGo {
     height: 50px;
     width: 50px;
@@ -142,7 +142,7 @@ body {
   animation: pulseAppear 1s forwards;
   animation-delay: 3.2s;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   @keyframes pulseAppear {
     0% {
       width: 0px;
@@ -221,7 +221,12 @@ body {
   bottom: 10px;
   width: 60vw;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .navbar {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .navbar {
     width: 80vw;
   }
@@ -251,7 +256,12 @@ body {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.2rem;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .navbar__link {
+    font-size: 0.8rem;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .navbar__link {
     font-size: 0.8rem;
   }
@@ -278,7 +288,14 @@ body {
   width: 70vw;
   background-color: white;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  #linkBar {
+    height: 2px;
+    width: 90vw;
+    bottom: 38px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   #linkBar {
     height: 2px;
     width: 90vw;
@@ -307,7 +324,14 @@ body {
   border-radius: 50%;
   margin: 0px 0px 15px 0px;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .circle {
+    height: 12px;
+    width: 12px;
+    margin: 0px 0px 10px 0px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .circle {
     height: 12px;
     width: 12px;
@@ -368,7 +392,13 @@ body {
   height: 67vh;
   width: 80vw;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .home__visibleArea {
+    flex-direction: column;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .home__visibleArea {
     flex-direction: column;
     width: 90vw;
@@ -393,7 +423,13 @@ body {
   height: auto;
   width: 100%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__size {
+    height: 67vh;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__size {
     height: 67vh;
     justify-content: center;
@@ -406,7 +442,15 @@ body {
   position: absolute;
   left: 5%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__box {
+    width: 80vw;
+    margin: 28% auto 73% auto;
+    left: 0;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__box {
     width: 80vw;
     margin: 28% auto 73% auto;
@@ -422,7 +466,12 @@ body {
   font-size: 8vw;
   color: white;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__title {
+    font-size: 12.8vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__title {
     font-size: 12.8vw;
   }
@@ -436,7 +485,12 @@ body {
   font-size: 3vw;
   color: rgba(255, 255, 255, 0.4);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__subTitle {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__subTitle {
     font-size: 1rem;
   }
@@ -448,7 +502,15 @@ body {
   z-index: 2;
   width: 30%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__portrait {
+    width: 55%;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__portrait {
     width: 55%;
     margin: auto;
@@ -462,20 +524,30 @@ body {
 .dialouge__portrait--blink:hover {
   display: none;
 }
-.dialouge__frame, .dialouge__frame--phone {
+.dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
   margin: auto;
   width: 100%;
   display: visible;
 }
-@media only screen and (max-width: 576px) {
-  .dialouge__frame, .dialouge__frame--phone {
+@media only screen and (max-width: 400px) {
+  .dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
     display: none;
   }
 }
 .dialouge__frame--phone {
   display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__frame--phone {
+    display: block;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__frame--phone {
     display: block;
   }
@@ -491,7 +563,13 @@ body {
   height: 67vh;
   width: 80vw;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .about__visibleArea {
+    flex-direction: column;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .about__visibleArea {
     flex-direction: column;
     width: 90vw;
@@ -516,7 +594,14 @@ body {
   height: auto;
   width: 100%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__size {
+    height: 67vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__size {
     height: 67vh;
     justify-content: center;
@@ -530,7 +615,15 @@ body {
   position: absolute;
   left: 5%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__box {
+    width: 80vw;
+    margin: 30% auto 70% auto;
+    left: 0;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__box {
     width: 80vw;
     margin: 44% auto 56% auto;
@@ -548,7 +641,13 @@ body {
   color: rgba(255, 255, 255, 0.4);
   width: 62%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__paragraph {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__paragraph {
     font-size: 0.95rem;
     width: 100%;
@@ -561,7 +660,15 @@ body {
   z-index: 2;
   width: 30%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__portrait {
+    width: 55%;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__portrait {
     width: 55%;
     margin: auto;
@@ -575,22 +682,36 @@ body {
 .dialouge__portrait--blink:hover {
   display: none;
 }
-.dialouge__frame, .dialouge__frame--phone {
+.dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
   margin: auto;
   width: 100%;
   display: visible;
 }
-@media only screen and (max-width: 576px) {
-  .dialouge__frame, .dialouge__frame--phone {
+@media only screen and (max-width: 400px) {
+  .dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .dialouge__frame, .dialouge__frame--phoneSmall, .dialouge__frame--phone {
     display: none;
   }
 }
 .dialouge__frame--phone {
   display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__frame--phone {
     display: block;
+  }
+}
+.dialouge__frame--phoneSmall {
+  display: none;
+}
+@media only screen and (max-width: 400px) {
+  .dialouge__frame--phoneSmall {
+    display: block;
+    margin: 40% auto 60% auto;
   }
 }
 
@@ -604,7 +725,13 @@ body {
   height: 67vh;
   width: 80vw;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .about__visibleArea {
+    flex-direction: column;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .about__visibleArea {
     flex-direction: column;
     width: 90vw;
@@ -629,7 +756,14 @@ body {
   height: auto;
   width: 100%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__size {
+    height: 67vh;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__size {
     height: 67vh;
     justify-content: center;
@@ -643,7 +777,15 @@ body {
   position: absolute;
   left: 5%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__box {
+    width: 80vw;
+    margin: 30% auto 70% auto;
+    left: 0;
+    right: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__box {
     width: 80vw;
     margin: 44% auto 56% auto;
@@ -661,7 +803,13 @@ body {
   color: rgba(255, 255, 255, 0.4);
   width: 62%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__paragraph {
+    font-size: 0.95rem;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__paragraph {
     font-size: 0.95rem;
     width: 100%;
@@ -674,7 +822,15 @@ body {
   z-index: 2;
   width: 30%;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
+  .dialouge__portrait {
+    width: 55%;
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__portrait {
     width: 55%;
     margin: auto;
@@ -688,22 +844,36 @@ body {
 .dialouge__portrait--blink:hover {
   display: none;
 }
-.dialouge__frame, .dialouge__frame--phone {
+.dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
   margin: auto;
   width: 100%;
   display: visible;
 }
-@media only screen and (max-width: 576px) {
-  .dialouge__frame, .dialouge__frame--phone {
+@media only screen and (max-width: 400px) {
+  .dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
+    display: none;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
     display: none;
   }
 }
 .dialouge__frame--phone {
   display: none;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__frame--phone {
     display: block;
+  }
+}
+.dialouge__frame--phoneSmall {
+  display: none;
+}
+@media only screen and (max-width: 400px) {
+  .dialouge__frame--phoneSmall {
+    display: block;
+    margin: 40% auto 60% auto;
   }
 }
 
@@ -723,7 +893,7 @@ footer > p {
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.4);
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 401px) and (max-width: 576px) {
   footer > p {
     width: 90vw;
   }
