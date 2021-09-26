@@ -139,10 +139,10 @@
       @extend .dialouge__frame;
       display: none;
       @include mQ.query-phone-small {
-        display: block;
+        display: visible;
       }
       @include mQ.query-phone {
-        display: block;
+        display: visible;
       }
     }
   }

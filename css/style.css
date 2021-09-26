@@ -544,12 +544,12 @@ body {
 }
 @media only screen and (max-width: 400px) {
   .dialouge__frame--phone {
-    display: block;
+    display: visible;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__frame--phone {
-    display: block;
+    display: visible;
   }
 }
 
