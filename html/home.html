@@ -79,7 +79,7 @@
     </ul>
     <div id="linkBar"></div>
     <!-- <img id="fox" src="./../media/test-shiro.png"> -->
-    <img id="pixelArt" src="./../media/nav__sectionArt.png">
+    <!-- <img id="pixelArt" src="./../media/temp nav.png"> -->
   </nav>
 
   <!-- main content -->
@@ -97,31 +97,12 @@
           <img class="dialouge__portrait" src="./../media/landingpageportrait2_laptop.png">
           <img class="dialouge__frame" src="./../media/home__dialouge.png">
           <img class="dialouge__frame--phone" src="./../media/home__dialouge--phone.png">
-          <img class="dialouge__frame--phoneSmall" src="./../media/home__dialouge--phoneSmall.png">
-        </div>
         </div>
       </div>
     </section>
 
     <!-- about section -->
     <section id="about" class="section">
-      <div class="about__visibleArea">
-        <div class="dialouge__size">
-          <div class="dialouge__box">
-            <h2 class="dialouge__paragraph">I'm a fullstack developer currently in the middle of a training montage! 
-              <br />
-              <br />
-            Having come from an animation background I have a strong eye for details and tackle problems creatively. 
-            I'm always on the lookout to give things a sense of magic and wonder.     
-            </h2> 
-          </div>
-          <img class="dialouge__portrait  dialouge__portrait--blink" src="./../media/landingpageportrait1_laptop.png">
-          <img class="dialouge__portrait" src="./../media/landingpageportrait2_laptop.png">
-          <img class="dialouge__frame" src="./../media/home__dialouge.png">
-          <img class="dialouge__frame--phone" src="./../media/home__dialouge--phone.png">
-          <img class="dialouge__frame--phoneSmall" src="./../media/home__dialouge--phoneSmall.png">
-        </div>
-      </div>
     </section>
 
     <!-- skills section -->
@@ -135,20 +116,26 @@
     <!-- contact section -->
     <section id="contact" class="section contact">
       <div class="contact__section">
+        <h1>Got a <u>Quest</u>ion?</h1>
+        <h2>Let's create something magic.</h2>
         <div class="contact__section--1">
           <!-- form -->
           <form id="contactForm" class="form" onsubmit="return submitMessage(event);" action="https://formsubmit.co/graham.emily15@gmail.com" method="POST">
 
+            <!-- full name -->
+            <label for="fullName" class="form__label">Full Name*:</label>
+            <input type="text" name="fullName" id="fullName" required>
+
             <!-- email -->
-            <label for="email" class="form__label">Email:</label>
+            <label for="email" class="form__label">Email*:</label>
             <input type="text" name="email" id="email" required>
 
             <!-- full name -->
-            <label for="fullName" class="form__label">Full Name:</label>
-            <input type="text" name="fullName" id="fullName">
+            <label for="phone" class="form__label">Phone:</label>
+            <input type="text" name="phone" id="phone">
 
             <!-- message -->
-            <label for="message" class="form__label">Got a <u>Quest</u>ion?:</label>
+            <label for="message" class="form__label">Message*:</label>
             <textarea name="message" id="message" rows="3" cols="20" placeholder="Tell us what's on your mind" required></textarea>
 
             <!-- clear button -->
