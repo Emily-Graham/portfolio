@@ -1,0 +1,108 @@
+.about {
+  &__visibleArea {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include m.height-width (67vh, 80vw);
+    @include mQ.query-phone {
+      flex-direction: column;
+      width: 90vw;
+    }
+    @include mQ.query-tablet {
+      width: 90vw;
+    }
+    @include mQ.query-tablet-landscape {
+      width: 90vw;
+    }
+  }
+}
+
+.dialouge {
+
+  &__size {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin: auto 0%;
+    @include m.height-width(auto, 100%);
+
+    @include mQ.query-phone {
+      height: 67vh;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 5%;
+
+    @include mQ.query-phone {
+      width: 80vw;
+      margin: 44% auto 56% auto;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__paragraph {
+    position: relative;
+    z-index: 2;
+    padding-left: 4px;
+    font-family: v.$smallText;
+    font-weight: normal;
+    font-size: 1.5vw;
+    color: p.$transparentText;
+    width: 62%;
+    @include mQ.query-phone {
+      font-size: 0.95rem;
+      width: 100%;
+    }
+  }
+
+  &__portrait {
+    position: absolute;
+    bottom: 3px;
+    right: 5%;
+    z-index: 2;
+    width: 30%;
+
+    @include mQ.query-phone {
+      width: 55%;
+      margin: auto;
+      right: 0;
+      left: 0;
+    }
+
+    &--blink {
+      z-index: 3;
+
+      &:hover {
+        display: none;
+      }
+    }
+  }
+
+  &__frame {
+    margin: auto;
+    width: 100%;
+    display: visible;
+    @include mQ.query-phone {
+      display: none;
+    }
+
+    &--phone {
+      @extend .dialouge__frame;
+      display: none;
+      @include mQ.query-phone {
+        display: block;
+      }
+    }
+  }
+}
