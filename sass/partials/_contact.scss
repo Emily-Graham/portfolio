@@ -6,7 +6,8 @@
 .contact {
   position:relative;
   // z-index: -1;
-  height: calc(100vh - 20px);
+  height: 100vh;
+  width: 100vw;
 
   &__section {
     display: flex;
@@ -14,10 +15,15 @@
     align-items: center;
     position: absolute;
     bottom: 0px;
-    @include m.height-width(67vh, 100vw);
-    border: 1px solid red;
+    @include m.height-width(67vh, 50%);
+    @include mQ.query-phone-small {
+      flex-direction: column;
+      justify-content: center;
+      width: 95vw;
+    }
     @include mQ.query-phone {
       flex-direction: column;
+      justify-content: center;
       width: 95vw;
     }
     @include mQ.query-tablet {
@@ -26,46 +32,88 @@
     @include mQ.query-tablet-landscape {
       width: 90vw;
     }
-    
-    &--1 {
-      background-color: antiquewhite;
-      max-height: 60vh;
-      width: 50%;
-      border: 1px solid blue;
-      @include mQ.query-phone {
-        width: 100%;
-      }
-      @include mQ.query-tablet {
-        width: 70%;
-      }
-      @include mQ.query-tablet-landscape {
-        width: 90vw;
-      }
-    }
-
-    &--2 {
-      display: flex;
-      background-color: peachpuff;
-      max-height: 60vh;
-      width: 40%;
-      border: 1px solid green;
-    }
-  }
-
-  &__image {
-    width: 100%;
-    height: auto;
   }
 }
 
 .form {
-  @include m.height-width(300px, 200px);
-  padding: 20px;
-  background-color: peachpuff;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 20px;
+  min-width: 300px;
+  width: 100%;
+  @include mQ.query-phone-small {
+    grid-gap: 10px;
+  }
+  @include mQ.query-phone {
+    grid-gap: 10px;
+  }
+  @include mQ.query-tablet {
+    grid-gap: 15px;
+  }
+  @include mQ.query-tablet-landscape {
+    grid-gap: 15px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include m.height-width(500px, 380px);
+    padding: 20px;
+    background-color: peachpuff;
+    @include mQ.query-phone-small {
+      @include m.height-width(90%, 90vw);
+      padding: 10px;
+    }
+    @include mQ.query-phone {
+      @include m.height-width(80%, 80%);
+      padding: 15px;
+    }
+    @include mQ.query-tablet {
+      @include m.height-width(80%, 60%);
+    }
+    @include mQ.query-tablet-landscape {
+      @include m.height-width(80%, 60%);
+    }
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-family: v.$smallText;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-family: v.$smallText;
+    color: p.$transparentBlack;
+    text-align: center;
+    font-size: 1rem;
+    @include mQ.query-phone-small {
+      margin-bottom: 10px;
+    }
+    @include mQ.query-phone {
+      margin-bottom: 20px;
+    }
+  }
 
   &__label {
-    color: p.$white;
+    color: p.$black;
     font-family: v.$smallText;
+    
+    @include mQ.query-phone-small {
+      font-size: 0.9rem;
+    }
+    @include mQ.query-phone {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__input {
+    padding: 8px;
+    width: 90%;
+    border: 1px solid white;
   }
 
   &__button {
@@ -73,23 +121,50 @@
     justify-content: center;
     align-items: center;
     @include m.height-width(60px, 60px);
-    padding: 20px 10px;
     color: p.$white;
     border: none;
     border-radius: 50%;
+    @include mQ.query-phone-small {
+      @include m.height-width(50px, 50px);
+    }
+    @include mQ.query-phone {
+      @include m.height-width(50px, 50px);
+    }
 
     &:hover {
       cursor: pointer;
     }
 
     &--reset {
+      position: absolute;
+      bottom: 20px;
+      right: 100px;
       color: black;
       border: 4px solid black;
+      @include mQ.query-phone-small {
+        right: 80px;
+        bottom: 10px;
+      }
+      @include mQ.query-phone {
+        right: 80px;
+        bottom: 10px;
+      }
     }
 
     &--submit {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
       color: p.$white;
       background-color: crimson;
+      @include mQ.query-phone-small {
+        right: 10px;
+        bottom: 10px;
+      }
+      @include mQ.query-phone {
+        right: 10px;
+        bottom: 10px;
+      }
     }
   }
 }

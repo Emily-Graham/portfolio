@@ -379,7 +379,7 @@ body {
 }
 
 #contact {
-  background-color: skyblue;
+  background-color: black;
 }
 
 .home__visibleArea {
@@ -544,12 +544,12 @@ body {
 }
 @media only screen and (max-width: 400px) {
   .dialouge__frame--phone {
-    display: block;
+    display: visible;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .dialouge__frame--phone {
-    display: block;
+    display: visible;
   }
 }
 
@@ -715,165 +715,210 @@ body {
   }
 }
 
-.about__visibleArea {
+.contact {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+.contact__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   height: 67vh;
-  width: 80vw;
+  width: 50%;
 }
 @media only screen and (max-width: 400px) {
-  .about__visibleArea {
+  .contact__section {
     flex-direction: column;
-    width: 90vw;
+    justify-content: center;
+    width: 95vw;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .about__visibleArea {
+  .contact__section {
     flex-direction: column;
-    width: 90vw;
+    justify-content: center;
+    width: 95vw;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .about__visibleArea {
+  .contact__section {
     width: 90vw;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .about__visibleArea {
+  .contact__section {
     width: 90vw;
   }
 }
 
-.dialouge__size {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  margin: auto 0%;
-  height: auto;
+.form {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 20px;
+  min-width: 300px;
   width: 100%;
 }
 @media only screen and (max-width: 400px) {
-  .dialouge__size {
-    height: 67vh;
-    justify-content: center;
-    align-items: center;
+  .form {
+    grid-gap: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__size {
-    height: 67vh;
-    justify-content: center;
-    align-items: center;
+  .form {
+    grid-gap: 10px;
   }
 }
-.dialouge__box {
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .form {
+    grid-gap: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .form {
+    grid-gap: 15px;
+  }
+}
+.form__container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  left: 5%;
+  height: 500px;
+  width: 380px;
+  padding: 20px;
+  background-color: peachpuff;
 }
 @media only screen and (max-width: 400px) {
-  .dialouge__box {
-    width: 80vw;
-    margin: 30% auto 70% auto;
-    left: 0;
-    right: 0;
+  .form__container {
+    height: 90%;
+    width: 90vw;
+    padding: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__box {
-    width: 80vw;
-    margin: 44% auto 56% auto;
-    left: 0;
-    right: 0;
+  .form__container {
+    height: 80%;
+    width: 80%;
+    padding: 15px;
   }
 }
-.dialouge__paragraph {
-  position: relative;
-  z-index: 2;
-  padding-left: 4px;
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .form__container {
+    height: 80%;
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .form__container {
+    height: 80%;
+    width: 60%;
+  }
+}
+.form__title {
+  margin-top: 10px;
   font-family: "Inconsolata", monospace;
-  font-weight: normal;
-  font-size: 1.5vw;
-  color: rgba(255, 255, 255, 0.4);
-  width: 62%;
+  font-size: 2rem;
+  text-align: center;
+}
+.form__subtitle {
+  margin-bottom: 30px;
+  font-family: "Inconsolata", monospace;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 1rem;
 }
 @media only screen and (max-width: 400px) {
-  .dialouge__paragraph {
-    font-size: 0.95rem;
-    width: 100%;
+  .form__subtitle {
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__paragraph {
-    font-size: 0.95rem;
-    width: 100%;
+  .form__subtitle {
+    margin-bottom: 20px;
   }
 }
-.dialouge__portrait {
+.form__label {
+  color: black;
+  font-family: "Inconsolata", monospace;
+}
+@media only screen and (max-width: 400px) {
+  .form__label {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__label {
+    font-size: 0.8rem;
+  }
+}
+.form__input {
+  padding: 8px;
+  width: 90%;
+  border: 1px solid white;
+}
+.form__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 400px) {
+  .form__button {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__button {
+    height: 50px;
+    width: 50px;
+  }
+}
+.form__button:hover {
+  cursor: pointer;
+}
+.form__button--reset {
   position: absolute;
-  bottom: 3px;
-  right: 5%;
-  z-index: 2;
-  width: 30%;
+  bottom: 20px;
+  right: 100px;
+  color: black;
+  border: 4px solid black;
 }
 @media only screen and (max-width: 400px) {
-  .dialouge__portrait {
-    width: 55%;
-    margin: auto;
-    right: 0;
-    left: 0;
+  .form__button--reset {
+    right: 80px;
+    bottom: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__portrait {
-    width: 55%;
-    margin: auto;
-    right: 0;
-    left: 0;
+  .form__button--reset {
+    right: 80px;
+    bottom: 10px;
   }
 }
-.dialouge__portrait--blink {
-  z-index: 3;
-}
-.dialouge__portrait--blink:hover {
-  display: none;
-}
-.dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
-  margin: auto;
-  width: 100%;
-  display: visible;
+.form__button--submit {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  color: white;
+  background-color: crimson;
 }
 @media only screen and (max-width: 400px) {
-  .dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
-    display: none;
+  .form__button--submit {
+    right: 10px;
+    bottom: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__frame, .dialouge__frame--phone, .dialouge__frame--phoneSmall {
-    display: none;
-  }
-}
-.dialouge__frame--phone {
-  display: none;
-}
-@media only screen and (min-width: 401px) and (max-width: 576px) {
-  .dialouge__frame--phone {
-    display: block;
-  }
-}
-.dialouge__frame--phoneSmall {
-  display: none;
-}
-@media only screen and (max-width: 400px) {
-  .dialouge__frame--phoneSmall {
-    display: block;
-    margin: 40% auto 60% auto;
+  .form__button--submit {
+    right: 10px;
+    bottom: 10px;
   }
 }
 

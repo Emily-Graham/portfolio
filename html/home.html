@@ -79,7 +79,7 @@
     </ul>
     <div id="linkBar"></div>
     <!-- <img id="fox" src="./../media/test-shiro.png"> -->
-    <img id="pixelArt" src="./../media/nav__sectionArt.png">
+    <!-- <img id="pixelArt" src="./../media/temp nav.png"> -->
   </nav>
 
   <!-- main content -->
@@ -97,8 +97,7 @@
           <img class="dialouge__portrait" src="./../media/landingpageportrait2_laptop.png">
           <img class="dialouge__frame" src="./../media/home__dialouge.png">
           <img class="dialouge__frame--phone" src="./../media/home__dialouge--phone.png">
-          <img class="dialouge__frame--phoneSmall" src="./../media/home__dialouge--phoneSmall.png">
-        </div>
+          <img class="dialouge__frame--phoneSmall" src="./../media/home__dialouge--phone.png">
         </div>
       </div>
     </section>
@@ -135,39 +134,41 @@
     <!-- contact section -->
     <section id="contact" class="section contact">
       <div class="contact__section">
-        <div class="contact__section--1">
+        <div class="form__container">
+          <h1 class="form__title">Got a <u>Quest</u>ion?</h1>
+          <h2 class="form__subtitle">Let's create something magical</h2>
           <!-- form -->
           <form id="contactForm" class="form" onsubmit="return submitMessage(event);" action="https://formsubmit.co/graham.emily15@gmail.com" method="POST">
 
-            <!-- email -->
-            <label for="email" class="form__label">Email:</label>
-            <input type="text" name="email" id="email" required>
-
             <!-- full name -->
             <label for="fullName" class="form__label">Full Name:</label>
-            <input type="text" name="fullName" id="fullName">
+            <input class="form__input" type="text" name="fullName" id="fullName" required>
+
+            <!-- email -->
+            <label for="email" class="form__label">Email:</label>
+            <input class="form__input" type="text" name="email" id="email" required>
+
+            <!-- phone -->
+            <label for="phone" class="form__label">Phone:</label>
+            <input class="form__input" type="text" name="phone" id="phone">
 
             <!-- message -->
-            <label for="message" class="form__label">Got a <u>Quest</u>ion?:</label>
-            <textarea name="message" id="message" rows="3" cols="20" placeholder="Tell us what's on your mind" required></textarea>
+            <label for="message" class="form__label">Message:</label>
+            <textarea class="form__input" name="message" id="message" rows="7" cols="20" placeholder="What's on your mind?" required></textarea>
 
             <!-- clear button -->
-            <input class="form__button form__button--reset" type="reset" onclick="clearForm();">
+            <input id="form__reset" class="form__button form__button--reset" type="reset" onclick="clearForm();">
 
             <!-- submit button -->
             <input id="submit" type="submit" class="form__button form__button--submit">
           </form>
-        </div>
-        <div class="contact__section--2">
-          <!-- REPLACE IMAGE WITH PIXEL ASSET-->
-          <img class="contact__image" src="./../media/4b2c2bb529955adc24eba210b7127655.jpg">
         </div>
       </div>
     </section>
   </main>
   
   <!-- footer -->
-  <footer id="footer">
-  </footer>
+  <!-- <footer id="footer">
+  </footer> -->
 </body>
 </html>
