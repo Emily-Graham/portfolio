@@ -728,7 +728,6 @@ body {
   bottom: 0px;
   height: 67vh;
   width: 50%;
-  border: 1px solid red;
 }
 @media only screen and (max-width: 400px) {
   .contact__section {
@@ -756,11 +755,31 @@ body {
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: white;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 20px;
+  min-width: 300px;
   width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .form {
+    grid-gap: 10px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form {
+    grid-gap: 10px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .form {
+    grid-gap: 15px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .form {
+    grid-gap: 15px;
+  }
 }
 .form__container {
   position: relative;
@@ -770,18 +789,19 @@ body {
   width: 380px;
   padding: 20px;
   background-color: peachpuff;
-  border: 1px solid blue;
 }
 @media only screen and (max-width: 400px) {
   .form__container {
-    height: 80%;
-    width: 80%;
+    height: 90%;
+    width: 90vw;
+    padding: 10px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .form__container {
     height: 80%;
     width: 80%;
+    padding: 15px;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
@@ -797,22 +817,46 @@ body {
   }
 }
 .form__title {
+  margin-top: 10px;
   font-family: "Inconsolata", monospace;
   font-size: 2rem;
+  text-align: center;
 }
 .form__subtitle {
+  margin-bottom: 30px;
   font-family: "Inconsolata", monospace;
   color: rgba(0, 0, 0, 0.4);
+  text-align: center;
   font-size: 1rem;
+}
+@media only screen and (max-width: 400px) {
+  .form__subtitle {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__subtitle {
+    margin-bottom: 20px;
+  }
 }
 .form__label {
   color: black;
   font-family: "Inconsolata", monospace;
 }
+@media only screen and (max-width: 400px) {
+  .form__label {
+    font-size: 0.9rem;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__label {
+    font-size: 0.8rem;
+  }
+}
 .form__input {
-  margin: 20px 0px 0px 0px;
   padding: 8px;
-  width: 72%;
+  width: 90%;
+  border: 1px solid white;
 }
 .form__button {
   display: flex;
@@ -824,6 +868,18 @@ body {
   border: none;
   border-radius: 50%;
 }
+@media only screen and (max-width: 400px) {
+  .form__button {
+    height: 50px;
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__button {
+    height: 50px;
+    width: 50px;
+  }
+}
 .form__button:hover {
   cursor: pointer;
 }
@@ -834,12 +890,36 @@ body {
   color: black;
   border: 4px solid black;
 }
+@media only screen and (max-width: 400px) {
+  .form__button--reset {
+    right: 80px;
+    bottom: 10px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__button--reset {
+    right: 80px;
+    bottom: 10px;
+  }
+}
 .form__button--submit {
   position: absolute;
   right: 20px;
   bottom: 20px;
   color: white;
   background-color: crimson;
+}
+@media only screen and (max-width: 400px) {
+  .form__button--submit {
+    right: 10px;
+    bottom: 10px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .form__button--submit {
+    right: 10px;
+    bottom: 10px;
+  }
 }
 
 footer {

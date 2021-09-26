@@ -16,7 +16,6 @@
     position: absolute;
     bottom: 0px;
     @include m.height-width(67vh, 50%);
-    border: 1px solid red;
     @include mQ.query-phone-small {
       flex-direction: column;
       justify-content: center;
@@ -37,11 +36,23 @@
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: white;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 20px;
+  min-width: 300px;
   width: 100%;
+  @include mQ.query-phone-small {
+    grid-gap: 10px;
+  }
+  @include mQ.query-phone {
+    grid-gap: 10px;
+  }
+  @include mQ.query-tablet {
+    grid-gap: 15px;
+  }
+  @include mQ.query-tablet-landscape {
+    grid-gap: 15px;
+  }
 
   &__container {
     position: relative;
@@ -50,12 +61,13 @@
     @include m.height-width(500px, 380px);
     padding: 20px;
     background-color: peachpuff;
-    border: 1px solid blue;
     @include mQ.query-phone-small {
-      @include m.height-width(80%, 80%);
+      @include m.height-width(90%, 90vw);
+      padding: 10px;
     }
     @include mQ.query-phone {
       @include m.height-width(80%, 80%);
+      padding: 15px;
     }
     @include mQ.query-tablet {
       @include m.height-width(80%, 60%);
@@ -66,26 +78,42 @@
   }
 
   &__title {
+    margin-top: 10px;
     font-family: v.$smallText;
     font-size: 2rem;
+    text-align: center;
   }
 
   &__subtitle {
+    margin-bottom: 30px;
     font-family: v.$smallText;
     color: p.$transparentBlack;
+    text-align: center;
     font-size: 1rem;
+    @include mQ.query-phone-small {
+      margin-bottom: 10px;
+    }
+    @include mQ.query-phone {
+      margin-bottom: 20px;
+    }
   }
 
   &__label {
     color: p.$black;
     font-family: v.$smallText;
-
+    
+    @include mQ.query-phone-small {
+      font-size: 0.9rem;
+    }
+    @include mQ.query-phone {
+      font-size: 0.8rem;
+    }
   }
 
   &__input {
-    margin: 20px 0px 0px 0px;
     padding: 8px;
-    width: 72%;
+    width: 90%;
+    border: 1px solid white;
   }
 
   &__button {
@@ -96,6 +124,12 @@
     color: p.$white;
     border: none;
     border-radius: 50%;
+    @include mQ.query-phone-small {
+      @include m.height-width(50px, 50px);
+    }
+    @include mQ.query-phone {
+      @include m.height-width(50px, 50px);
+    }
 
     &:hover {
       cursor: pointer;
@@ -107,6 +141,14 @@
       right: 100px;
       color: black;
       border: 4px solid black;
+      @include mQ.query-phone-small {
+        right: 80px;
+        bottom: 10px;
+      }
+      @include mQ.query-phone {
+        right: 80px;
+        bottom: 10px;
+      }
     }
 
     &--submit {
@@ -115,6 +157,14 @@
       bottom: 20px;
       color: p.$white;
       background-color: crimson;
+      @include mQ.query-phone-small {
+        right: 10px;
+        bottom: 10px;
+      }
+      @include mQ.query-phone {
+        right: 10px;
+        bottom: 10px;
+      }
     }
   }
 }
