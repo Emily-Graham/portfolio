@@ -30,6 +30,7 @@
 
 #skills {
   background-color: black;
+  position: relative;
 }
 
 #projects {
@@ -41,5 +42,6 @@
 }
 @import "./partials/home";
 @import "./partials/about";
+@import "./partials/skills";
 @import "./partials/contact";
 @import "./partials/footer";
