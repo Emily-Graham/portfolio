@@ -27,7 +27,7 @@
       width: 90vw;
     }
     
-    &--1 {
+    &__container {
       background-color: antiquewhite;
       max-height: 60vh;
       width: 50%;
@@ -42,14 +42,6 @@
         width: 90vw;
       }
     }
-
-    &--2 {
-      display: flex;
-      background-color: peachpuff;
-      max-height: 60vh;
-      width: 40%;
-      border: 1px solid green;
-    }
   }
 
   &__image {
@@ -59,12 +51,23 @@
 }
 
 .form {
-  @include m.height-width(300px, 200px);
+  @include m.height-width(500px, 300px);
   padding: 20px;
   background-color: peachpuff;
 
+  &__title {
+    font-family: v.$smallText;
+    font-size: 2rem;
+  }
+
+  &__subtitle {
+    font-family: v.$smallText;
+    color: p.$transparentBlack;
+    font-size: 1rem;
+  }
+
   &__label {
-    color: p.$white;
+    color: p.$black;
     font-family: v.$smallText;
   }
 
