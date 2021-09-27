@@ -25,15 +25,13 @@
     @include mQ.query-phone-small {
       margin-top: 10px;
       margin-right: 0px;
-      @include m.height-width(30%, 90vw);
-      @include m.border-pespective(0px, 2px, 3px, 2px);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-phone {
       margin-top: 10px;
       margin-right: 0px;
-      @include m.height-width(30%, 90vw);
-      @include m.border-pespective(0px, 2px, 3px, 2px);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-tablet {
@@ -53,14 +51,12 @@
 
     @include mQ.query-phone-small {
       margin-right: 0px;
-      @include m.height-width(85%, 90vw);
-      @include m.border-pespective(2px, 3px, 3px, 0px);
+      @include m.height-width(85%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-phone {
       margin-right: 0px;
-      @include m.height-width(85%, 90vw);
-      @include m.border-pespective(2px, 3px, 3px, 0px);
+      @include m.height-width(85%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-tablet {

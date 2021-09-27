@@ -392,7 +392,6 @@ body {
   align-items: flex-start;
   height: 67vh;
   width: 80vw;
-  border: 1px solid blue;
 }
 @media only screen and (max-width: 400px) {
   .home__visibleArea {
@@ -725,20 +724,21 @@ body {
   align-items: center;
   height: 67vh;
   width: 100vw;
-  border: 1px solid red;
 }
 
 .ui__skillTree {
+  position: relative;
   margin-right: 20px;
+  padding: 10px;
   height: 85%;
   width: 70%;
-  border: 1px solid blue;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
 }
 @media only screen and (max-width: 400px) {
   .ui__skillTree {
     height: 65%;
-    width: 100%;
+    width: 95%;
     margin-right: 0px;
     margin-top: 10px;
     border-radius: 20px;
@@ -747,29 +747,31 @@ body {
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .ui__skillTree {
     height: 65%;
-    width: 100%;
+    width: 95%;
     margin-right: 0px;
     margin-top: 10px;
     border-radius: 20px;
   }
 }
 .ui__description {
+  position: relative;
   height: 85%;
   width: 30%;
-  border: 1px solid white;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 15px;
 }
 @media only screen and (max-width: 400px) {
   .ui__description {
     height: 30%;
-    width: 100%;
+    width: 95%;
     border-radius: 20px;
   }
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .ui__description {
     height: 30%;
-    width: 100%;
+    width: 95%;
     border-radius: 20px;
   }
 }
@@ -823,10 +825,24 @@ body {
 .ui__tab {
   position: absolute;
   top: -15px;
-  left: 20%;
+  left: 25%;
   display: flex;
   justify-content: center;
-  border: 1px solid cadetblue;
+  align-items: center;
+}
+@media only screen and (max-width: 400px) {
+  .ui__tab {
+    top: 4px;
+    left: 25%;
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .ui__tab {
+    top: 4px;
+    left: 25%;
+    width: 50vw;
+  }
 }
 .ui__title {
   position: absolute;
@@ -837,6 +853,16 @@ body {
 .ui__tabImg {
   position: absolute;
   z-index: 1;
+}
+@media only screen and (max-width: 400px) {
+  .ui__tabImg {
+    width: 50vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .ui__tabImg {
+    width: 50vw;
+  }
 }
 
 .projects__visibleArea {
@@ -863,11 +889,7 @@ body {
     margin-top: 10px;
     margin-right: 0px;
     height: 30%;
-    width: 90vw;
-    border-top: 0px solid rgba(255, 255, 255, 0.4);
-    border-right: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-    border-left: 2px solid rgba(255, 255, 255, 0.4);
+    width: 95%;
     border-radius: 20px;
   }
 }
@@ -876,11 +898,7 @@ body {
     margin-top: 10px;
     margin-right: 0px;
     height: 30%;
-    width: 90vw;
-    border-top: 0px solid rgba(255, 255, 255, 0.4);
-    border-right: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-    border-left: 2px solid rgba(255, 255, 255, 0.4);
+    width: 95%;
     border-radius: 20px;
   }
 }
@@ -908,11 +926,7 @@ body {
   .projectUi__description {
     margin-right: 0px;
     height: 85%;
-    width: 90vw;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-right: 3px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-    border-left: 0px solid rgba(255, 255, 255, 0.4);
+    width: 95%;
     border-radius: 20px;
   }
 }
@@ -920,11 +934,7 @@ body {
   .projectUi__description {
     margin-right: 0px;
     height: 85%;
-    width: 90vw;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-right: 3px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-    border-left: 0px solid rgba(255, 255, 255, 0.4);
+    width: 95%;
     border-radius: 20px;
   }
 }

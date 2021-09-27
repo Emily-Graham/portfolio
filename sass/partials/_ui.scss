@@ -44,10 +44,21 @@
   &__tab {
     position: absolute;
     top: -15px;
-    left: 20%;
+    left: 25%;
     display: flex;
     justify-content: center;
-    border: 1px solid cadetblue;
+    align-items: center;
+
+    @include mQ.query-phone-small {
+      top: 4px;
+      left: 25%;
+      width: 50vw;
+    }
+    @include mQ.query-phone {
+      top: 4px;
+      left: 25%;
+      width: 50vw;
+    }
   }
   
   &__title {
@@ -55,10 +66,24 @@
     z-index: 2;
     color: p.$black;
     font-family: v.$smallText;
+
+    @include mQ.query-phone-small {
+     
+    }
+    @include mQ.query-phone {
+      
+    }
   }
 
   &__tabImg {
     position: absolute;
     z-index: 1;
+
+    @include mQ.query-phone-small {
+      width: 50vw;
+    }
+    @include mQ.query-phone {
+      width: 50vw;
+    }
   } 
 }

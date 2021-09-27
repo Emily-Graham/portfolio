@@ -10,26 +10,27 @@
   justify-content: center;
   align-items: center;
   @include m.height-width(67vh, 100vw);
-  border: 1px solid red;
 }
 
 
 
 .ui {
   &__skillTree {
+    position: relative;
     margin-right: 20px;
+    padding: 10px;
     @include m.height-width(85%, 70%);
-    border: 1px solid blue;
+    background: p.$uiInset;
     border-radius: 15px;
   
     @include mQ.query-phone-small {
-      @include m.height-width(65%, 100%);
+      @include m.height-width(65%, 95%);
       margin-right: 0px;
       margin-top: 10px;
       border-radius: 20px;
     }
     @include mQ.query-phone {
-      @include m.height-width(65%, 100%);
+      @include m.height-width(65%, 95%);
       margin-right: 0px;
       margin-top: 10px;
       border-radius: 20px;
@@ -37,16 +38,18 @@
   }
 
   &__description {
+    position: relative;
     @include m.height-width(85%, 30%);
-    border: 1px solid white;
+    padding: 10px;
+    background: p.$uiInset;
     border-radius: 15px;
 
     @include mQ.query-phone-small {
-      @include m.height-width(30%, 100%);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-phone {
-      @include m.height-width(30%, 100%);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
   }
