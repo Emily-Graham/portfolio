@@ -10,16 +10,22 @@
   justify-content: center;
   align-items: center;
   @include m.height-width(67vh, 100vw);
-  border: 1px solid red;
 }
 
 .projectUi {
   &__container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
     @include m.height-width(80%, 50%);
-    border: 1px solid yellow;
+    background: rgba(255, 255, 255, .7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     border-radius: 25px;
     @include mQ.query-phone-small {
+      flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       flex-direction: column-reverse;
@@ -29,6 +35,7 @@
       padding: 10px;
     }
     @include mQ.query-phone {
+      flex-direction: column;
       align-items: center;
       @include m.height-width(85%, 90vw);
       //alter margin based on title size
@@ -37,7 +44,7 @@
     }
     @include mQ.query-tablet {
       align-items: flex-end;
-      @include m.height-width(88%, 80%);
+      @include m.height-width(80%, 75%);
     }
     @include mQ.query-tablet-landscape {
       align-items: flex-end;
@@ -47,11 +54,49 @@
 
   &__list {
     position: relative;
-    @include m.height-width(80%, 80%);
+    @include m.height-width(80%, 35%);
+    margin-right: 20px;
+    background-color: black;
+    border: 1px solid purple;
+    border-radius: 15px;
+    @include mQ.query-phone-small {
+      margin-bottom: 10px;
+      margin-right: 0px;
+      @include m.height-width(85%, 90vw);
+    }
+    @include mQ.query-phone {
+      margin-bottom: 10px;
+      margin-right: 0px;
+      @include m.height-width(85%, 90vw);
+    }
+    @include mQ.query-tablet {
+      @include m.height-width(88%, 35%);
+    }
+    @include mQ.query-tablet-landscape {
+      @include m.height-width(80%, 35%);
+    }
   }
 
   &__description {
     position: relative;
+    @include m.height-width(80%, 65%);
+    background-color: black;
+    border: 1px solid orange;
+    border-radius: 15px;
+    @include mQ.query-phone-small {
+      margin-right: 0px;
+      @include m.height-width(30%, 90vw);
+    }
+    @include mQ.query-phone {
+      margin-right: 0px;
+      @include m.height-width(30%, 90vw);
+    }
+    @include mQ.query-tablet {
+      @include m.height-width(88%, 65%);
+    }
+    @include mQ.query-tablet-landscape {
+      @include m.height-width(80%, 65%);
+    }
   }
 
   &__tab {

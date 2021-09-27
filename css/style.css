@@ -823,18 +823,24 @@ body {
   align-items: center;
   height: 67vh;
   width: 100vw;
-  border: 1px solid red;
 }
 
 .projectUi__container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px;
   height: 80%;
   width: 50%;
-  border: 1px solid yellow;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 25px;
 }
 @media only screen and (max-width: 400px) {
   .projectUi__container {
+    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-direction: column-reverse;
@@ -846,6 +852,7 @@ body {
 }
 @media only screen and (min-width: 401px) and (max-width: 576px) {
   .projectUi__container {
+    flex-direction: column;
     align-items: center;
     height: 85%;
     width: 90vw;
@@ -856,8 +863,8 @@ body {
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .projectUi__container {
     align-items: flex-end;
-    height: 88%;
-    width: 80%;
+    height: 80%;
+    width: 75%;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -870,10 +877,73 @@ body {
 .projectUi__list {
   position: relative;
   height: 80%;
-  width: 80%;
+  width: 35%;
+  margin-right: 20px;
+  background-color: black;
+  border: 1px solid purple;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 400px) {
+  .projectUi__list {
+    margin-bottom: 10px;
+    margin-right: 0px;
+    height: 85%;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .projectUi__list {
+    margin-bottom: 10px;
+    margin-right: 0px;
+    height: 85%;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projectUi__list {
+    height: 88%;
+    width: 35%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .projectUi__list {
+    height: 80%;
+    width: 35%;
+  }
 }
 .projectUi__description {
   position: relative;
+  height: 80%;
+  width: 65%;
+  background-color: black;
+  border: 1px solid orange;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 400px) {
+  .projectUi__description {
+    margin-right: 0px;
+    height: 30%;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .projectUi__description {
+    margin-right: 0px;
+    height: 30%;
+    width: 90vw;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .projectUi__description {
+    height: 88%;
+    width: 65%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .projectUi__description {
+    height: 80%;
+    width: 65%;
+  }
 }
 .projectUi__tab {
   position: absolute;
