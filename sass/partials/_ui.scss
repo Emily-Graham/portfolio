@@ -1,0 +1,64 @@
+@use "./palette" as p;
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./mediaQuery" as mQ;
+
+.ui {
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    @include m.height-width(80%, 50%);
+    background: p.$uiFrame;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+
+    @include mQ.query-phone-small {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      @include m.height-width(85%, 90vw);
+      //alter margin based on title size
+      margin-top: 10px;
+      padding: 10px;
+    }
+    @include mQ.query-phone {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      @include m.height-width(85%, 90vw);
+      //alter margin based on title size
+      margin-top: 10px;
+      padding: 10px;
+    }
+    @include mQ.query-tablet {
+      @include m.height-width(80%, 80%);
+    }
+    @include mQ.query-tablet-landscape {
+      @include m.height-width(80%, 60%);
+    }
+  }
+
+  &__tab {
+    position: absolute;
+    top: -15px;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid cadetblue;
+  }
+  
+  &__title {
+    position: absolute;
+    z-index: 2;
+    color: p.$black;
+    font-family: v.$smallText;
+  }
+
+  &__tabImg {
+    position: absolute;
+    z-index: 1;
+  } 
+}

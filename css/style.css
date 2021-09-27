@@ -728,6 +728,52 @@ body {
   border: 1px solid red;
 }
 
+.ui__skillTree {
+  margin-right: 20px;
+  height: 85%;
+  width: 70%;
+  border: 1px solid blue;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 400px) {
+  .ui__skillTree {
+    height: 65%;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .ui__skillTree {
+    height: 65%;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 10px;
+    border-radius: 20px;
+  }
+}
+.ui__description {
+  height: 85%;
+  width: 30%;
+  border: 1px solid white;
+  border-radius: 15px;
+}
+@media only screen and (max-width: 400px) {
+  .ui__description {
+    height: 30%;
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 576px) {
+  .ui__description {
+    height: 30%;
+    width: 100%;
+    border-radius: 20px;
+  }
+}
+
 .ui__container {
   position: relative;
   display: flex;
@@ -735,7 +781,10 @@ body {
   padding: 20px;
   height: 80%;
   width: 50%;
-  border: 1px solid green;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
 }
 @media only screen and (max-width: 400px) {
   .ui__container {
@@ -771,50 +820,23 @@ body {
     width: 60%;
   }
 }
-.ui__title {
+.ui__tab {
   position: absolute;
   top: -15px;
-  color: white;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid cadetblue;
+}
+.ui__title {
+  position: absolute;
+  z-index: 2;
+  color: black;
   font-family: "Inconsolata", monospace;
 }
-.ui__skillTree {
-  height: 85%;
-  width: 70%;
-  border: 1px solid blue;
-  margin-right: 20px;
-}
-@media only screen and (max-width: 400px) {
-  .ui__skillTree {
-    height: 65%;
-    width: 100%;
-    margin-right: 0px;
-    margin-top: 10px;
-  }
-}
-@media only screen and (min-width: 401px) and (max-width: 576px) {
-  .ui__skillTree {
-    height: 65%;
-    width: 100%;
-    margin-right: 0px;
-    margin-top: 10px;
-  }
-}
-.ui__description {
-  height: 85%;
-  width: 30%;
-  border: 1px solid white;
-}
-@media only screen and (max-width: 400px) {
-  .ui__description {
-    height: 30%;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 401px) and (max-width: 576px) {
-  .ui__description {
-    height: 30%;
-    width: 100%;
-  }
+.ui__tabImg {
+  position: absolute;
+  z-index: 1;
 }
 
 .projects__visibleArea {
@@ -827,54 +849,6 @@ body {
   width: 100vw;
 }
 
-.projectUi__container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 20px;
-  height: 80%;
-  width: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 25px;
-}
-@media only screen and (max-width: 400px) {
-  .projectUi__container {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    height: 85%;
-    width: 90vw;
-    margin-top: 10px;
-    padding: 10px;
-  }
-}
-@media only screen and (min-width: 401px) and (max-width: 576px) {
-  .projectUi__container {
-    flex-direction: column-reverse;
-    align-items: center;
-    height: 85%;
-    width: 90vw;
-    margin-top: 10px;
-    padding: 10px;
-  }
-}
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .projectUi__container {
-    align-items: flex-end;
-    height: 80%;
-    width: 75%;
-  }
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .projectUi__container {
-    align-items: flex-end;
-    height: 80%;
-    width: 60%;
-  }
-}
 .projectUi__list {
   position: relative;
   height: 80%;
@@ -965,24 +939,6 @@ body {
     height: 80%;
     width: 65%;
   }
-}
-.projectUi__tab {
-  position: absolute;
-  top: -15px;
-  left: 5%;
-  display: flex;
-  justify-content: center;
-  border: 1px solid cadetblue;
-}
-.projectUi__title {
-  position: absolute;
-  z-index: 2;
-  color: black;
-  font-family: "Inconsolata", monospace;
-}
-.projectUi__tabImg {
-  position: absolute;
-  z-index: 1;
 }
 
 .list__item {
