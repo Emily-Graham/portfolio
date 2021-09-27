@@ -9,6 +9,7 @@
 
 // body styling
 .section {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,14 +24,11 @@
 
 #about {
   display: flex;
-  position: relative;
-
   background-color: black;
 }
 
 #skills {
   background-color: black;
-  position: relative;
 }
 
 #projects {
@@ -43,5 +41,6 @@
 @import "./partials/home";
 @import "./partials/about";
 @import "./partials/skills";
+@import "./partials/projects";
 @import "./partials/contact";
 @import "./partials/footer";

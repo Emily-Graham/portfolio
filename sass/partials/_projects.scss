@@ -1,0 +1,77 @@
+@use "./palette" as p;
+@use "./variables" as v;
+@use "./mixins" as m;
+@use "./mediaQuery" as mQ;
+
+.projects__visibleArea {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include m.height-width(67vh, 100vw);
+  border: 1px solid red;
+}
+
+.projectUi {
+  &__container {
+    position: relative;
+    @include m.height-width(80%, 50%);
+    border: 1px solid yellow;
+    border-radius: 25px;
+    @include mQ.query-phone-small {
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+      @include m.height-width(85%, 90vw);
+      //alter margin based on title size
+      margin-top: 10px;
+      padding: 10px;
+    }
+    @include mQ.query-phone {
+      align-items: center;
+      @include m.height-width(85%, 90vw);
+      //alter margin based on title size
+      margin-top: 10px;
+      padding: 10px;
+    }
+    @include mQ.query-tablet {
+      align-items: flex-end;
+      @include m.height-width(88%, 80%);
+    }
+    @include mQ.query-tablet-landscape {
+      align-items: flex-end;
+      @include m.height-width(80%, 60%);
+    }
+  }
+
+  &__list {
+    position: relative;
+    @include m.height-width(80%, 80%);
+  }
+
+  &__description {
+    position: relative;
+  }
+
+  &__tab {
+    position: absolute;
+    top: -15px;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid cadetblue;
+  }
+  
+  &__title {
+    position: absolute;
+    z-index: 2;
+    color: p.$black;
+    font-family: v.$smallText;
+  }
+
+  &__tabImg {
+    position: absolute;
+    z-index: 1;
+  } 
+}

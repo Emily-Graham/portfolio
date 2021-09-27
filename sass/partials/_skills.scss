@@ -18,6 +18,7 @@
   &__container {
     position: relative;
     display: flex;
+    align-items: flex-end;
     padding: 20px;
     @include m.height-width(80%, 50%);
     border: 1px solid green;
@@ -32,17 +33,17 @@
     }
     @include mQ.query-phone {
       align-items: center;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
       @include m.height-width(85%, 90vw);
       //alter margin based on title size
       margin-top: 10px;
       padding: 10px;
     }
     @include mQ.query-tablet {
-      align-items: flex-end;
-      @include m.height-width(88%, 80%);
+      @include m.height-width(80%, 80%);
     }
     @include mQ.query-tablet-landscape {
-      align-items: flex-end;
       @include m.height-width(80%, 60%);
     }
   }
