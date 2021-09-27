@@ -1,4 +1,13 @@
+@use "./palette" as p;
+
 @mixin height-width ($height, $width) {
   height: $height;
   width: $width;  
+}
+
+@mixin border-pespective ($top, $right, $bottom, $left) {
+  border-top: $top solid p.$uiInsetBorder;
+  border-right: $right solid p.$uiInsetBorder;
+  border-bottom: $bottom solid p.$uiInsetBorder;
+  border-left: $left solid p.$uiInsetBorder;
 }
