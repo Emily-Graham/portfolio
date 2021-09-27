@@ -13,45 +13,6 @@
 }
 
 .projectUi {
-  &__container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 20px;
-    @include m.height-width(80%, 50%);
-    background: p.$uiFrame;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 25px;
-
-    @include mQ.query-phone-small {
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: flex-start;
-      
-      @include m.height-width(85%, 90vw);
-      //alter margin based on title size
-      margin-top: 10px;
-      padding: 10px;
-    }
-    @include mQ.query-phone {
-      flex-direction: column-reverse;
-      align-items: center;
-      @include m.height-width(85%, 90vw);
-      //alter margin based on title size
-      margin-top: 10px;
-      padding: 10px;
-    }
-    @include mQ.query-tablet {
-      align-items: flex-end;
-      @include m.height-width(80%, 75%);
-    }
-    @include mQ.query-tablet-landscape {
-      align-items: flex-end;
-      @include m.height-width(80%, 60%);
-    }
-  }
 
   &__list {
     position: relative;
@@ -64,15 +25,13 @@
     @include mQ.query-phone-small {
       margin-top: 10px;
       margin-right: 0px;
-      @include m.height-width(30%, 90vw);
-      @include m.border-pespective(0px, 2px, 3px, 2px);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-phone {
       margin-top: 10px;
       margin-right: 0px;
-      @include m.height-width(30%, 90vw);
-      @include m.border-pespective(0px, 2px, 3px, 2px);
+      @include m.height-width(30%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-tablet {
@@ -92,14 +51,12 @@
 
     @include mQ.query-phone-small {
       margin-right: 0px;
-      @include m.height-width(85%, 90vw);
-      @include m.border-pespective(2px, 3px, 3px, 0px);
+      @include m.height-width(85%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-phone {
       margin-right: 0px;
-      @include m.height-width(85%, 90vw);
-      @include m.border-pespective(2px, 3px, 3px, 0px);
+      @include m.height-width(85%, 95%);
       border-radius: 20px;
     }
     @include mQ.query-tablet {
@@ -109,27 +66,6 @@
       @include m.height-width(80%, 65%);
     }
   }
-
-  &__tab {
-    position: absolute;
-    top: -15px;
-    left: 5%;
-    display: flex;
-    justify-content: center;
-    border: 1px solid cadetblue;
-  }
-  
-  &__title {
-    position: absolute;
-    z-index: 2;
-    color: p.$black;
-    font-family: v.$smallText;
-  }
-
-  &__tabImg {
-    position: absolute;
-    z-index: 1;
-  } 
 }
 
 .list {

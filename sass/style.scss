@@ -21,27 +21,24 @@
 #home {
   background-color: black;
 }
-
 #about {
   display: flex;
   background-color: black;
 }
-
 #skills {
-
   background-color: black;
 }
-
 #projects {
   background-color: black;
 }
-
 #contact {
   background-color: black;
 }
+
 @import "./partials/home";
 @import "./partials/about";
 @import "./partials/skills";
+@import "./partials/ui";
 @import "./partials/projects";
 @import "./partials/contact";
 @import "./partials/footer";
