@@ -32,27 +32,37 @@
   z-index: 6;
   display: flex;
   justify-content: space-evenly;
-  bottom: 10px;
+  bottom: 15px;
   width: 60vw;
   
   @include mQ.query-phone-small {
     width: 80vw;
+    bottom: 13px;
   }
   @include mQ.query-phone {
     width: 80vw;
+    bottom: 14px;
   }
   @include mQ.query-tablet {
     width: 75vw;
+    bottom: 13px;
   }
   @include mQ.query-tablet-landscape {
     width: 70vw;
+    bottom: 13px;
   }
 
   &__item {
     margin: 0px 20px;
-    width: 38px; 
-    // width is not applying evenly on all nav__item
+    width: 25px; 
     list-style: none;
+
+    @include mQ.query-phone-small {
+      margin: 0px 15px;
+    }
+    @include mQ.query-phone {
+      margin: 0px 15px;
+    }
   }
 
   &__link {
@@ -89,7 +99,7 @@
 #linkBar {
   position: absolute;
   bottom: 54px;
-  height: 3px;
+  height: 2px;
   width: 70vw;
   background-color: p.$white;
 
@@ -112,25 +122,37 @@
 }
 
 .circle {
+  position: absolute;
+  bottom: 24px;
   @include m.height-width (20px, 20px);
   background-color: p.$white;
   border-radius: 50%;
-  margin: 0px 0px 15px 0px;
+  margin: 0px 0px 10px 0px;
 
   @include mQ.query-phone-small {
+    bottom: 13px;
     @include m.height-width (12px, 12px);
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 7px 0px;
   }
   @include mQ.query-phone {
+    bottom: 13px;
     @include m.height-width (12px, 12px);
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 6px 0px;
   }
   @include mQ.query-tablet {
+    bottom: 17px;
     @include m.height-width (15px, 15px);
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 6px 0px;
   }
   @include mQ.query-tablet-landscape {
+    bottom: 20px;
     @include m.height-width (17px, 17px);
-    margin: 0px 0px 13px 0px;
+    margin: 0px 0px 9px 0px;
   }
+}
+
+.location-circle {
+  position: absolute;
+  z-index: 7;
+  @extend .circle;
 }
