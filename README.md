@@ -1,4 +1,4 @@
-CURRENTLY BEING REDONE IN VUE! Can't wait to get all the art assets finsihed and working XD
+CURRENTLY BEING REDONE IN VUE! Can't wait to get all the art assets finished and working XD
 
 Aim:
 - to build a website the pays homage to pixel art games
